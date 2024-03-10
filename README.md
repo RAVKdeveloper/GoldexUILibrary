@@ -4,7 +4,9 @@ Goldex design system
 
 # Install
 
+<pre>
 npm i goldex-ui-library
+</pre>
 
 # Basic Usage
 

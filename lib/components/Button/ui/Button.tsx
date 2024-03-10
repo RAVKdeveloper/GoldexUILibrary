@@ -1,6 +1,6 @@
 import React from 'react'
-import './style.css'
+import s from './style.module.css'
 
 export function Button(props: React.ButtonHTMLAttributes<HTMLButtonElement>) {
-    return <button className='button' {...props} />
+    return <button className={s.button} {...props} />
 }

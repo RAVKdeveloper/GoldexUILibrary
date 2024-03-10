@@ -1,0 +1,3 @@
+.button {
+  @apply m-10 border border-red-500 text-gray-600 p-10;
+}
