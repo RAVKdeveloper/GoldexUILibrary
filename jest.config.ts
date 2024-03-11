@@ -6,7 +6,7 @@ export default {
     },
     rootDir: 'lib',
     moduleNameMapper: {
-        '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__ mocks __/fileMock.js',
+        '\\.(gif|ttf|eot|svg|png)$': 'jest-transform-stub',
         '^@app/(.*)$': '<rootDir>/$1',
         '\\.(css)$': 'identity-obj-proxy',
         },

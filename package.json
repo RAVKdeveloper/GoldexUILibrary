@@ -46,6 +46,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
+    "jest-transform-stub": "^2.0.0",
     "postcss": "^8.4.35",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -62,6 +63,7 @@
     "**/*.css"
   ],
   "dependencies": {
+    "@testing-library/user-event": "^14.5.2",
     "jest-environment-jsdom": "^29.7.0"
   }
 }

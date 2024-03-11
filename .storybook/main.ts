@@ -20,6 +20,7 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  staticDirs: ['../lib/components/Icons/images'],
   async viteFinal(config, options) {
     return config;
   },

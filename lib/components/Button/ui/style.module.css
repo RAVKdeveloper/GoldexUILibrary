@@ -1,3 +1,58 @@
 .button {
-  @apply m-10 border border-red-500 text-gray-600 p-10;
+  @apply flex justify-start items-center gap-1 rounded-xl 
+  outline-none font-medium border-2 border-transparent;
+}
+
+.button.primary {
+  @apply bg-primary-btn-bg text-primary-btn-text
+  hover:bg-primary-btn-bg-hover transition;
+}
+
+.button.secondary {
+  @apply bg-secondary-btn-bg text-secondary-btn-text border-secondary-border-color
+  hover:bg-secondary-btn-bg-hover transition;
+}
+
+.button.md {
+  @apply text-sm px-4 py-3;
+}
+
+.button.lg {
+  @apply text-base px-5 py-3;
+}
+
+.button.sm {
+  @apply text-sm px-4 py-2.5;
+}
+
+.button.es {
+  @apply text-sm px-3.5 py-2;
+}
+
+.button.disabled {
+  @apply opacity-35 drop-shadow-sm;
+}
+
+.button.primary.active {
+  @apply bg-primary-btn-bg-active;
+}
+
+.button.secondary.active {
+  @apply bg-secondary-btn-bg-hover;
+}
+
+.button.onlyIcon.md {
+  @apply p-3;
+}
+
+.button.onlyIcon.lg {
+  @apply p-3.5;
+}
+
+.button.onlyIcon.sm {
+  @apply p-2.5;
+}
+
+.button.onlyIcon.es {
+  @apply p-2;
 }
