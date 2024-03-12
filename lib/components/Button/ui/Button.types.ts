@@ -5,7 +5,7 @@ export interface ButtonType extends ButtonHTMLAttributes<HTMLButtonElement> {
     iconLocation?: 'end' | 'start' 
     icon?: ReactNode
     children?: ReactNode
-    variant: 'primary' | 'secondary'
+    variant: 'primary' | 'secondary' | 'critical'
     size?: 'md' | 'lg' | 'sm' | 'es'
     isActive?: boolean
 }

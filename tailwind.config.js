@@ -14,6 +14,7 @@ export default {
     extend: {
       spacing: {
         4.5: '1.125rem',
+        0.25: '1px'
       },
       colors: {
         'primary-btn-bg': '#73E5CF',
@@ -23,13 +24,33 @@ export default {
         'secondary-btn-bg': 'rgba(255, 255, 255, 0.04)',
         'secondary-btn-text': '#fff',
         'secondary-btn-bg-hover': 'rgba(255, 255, 255, 0.07)',
-        'secondary-border-color': 'rgba(255, 255, 255, 0.04)'
+        'secondary-border-color': 'rgba(255, 255, 255, 0.04)',
+        'critical-bg': '#F04438',
+        'critical-bg-active': '#BD352C',
+        'critical-bg-hover': '#D63D32',
+        'avatar-green': '#A8F1E3',
+        'avatar-lightPurple': '#BE9DF1',
+        'avatar-yellow': '#F29C37',
+        'avatar-blue': '#3782F2',
+        'avatar-purple': '#8937F2',
+        'avatar-pink': '#F94FB5',
+        'transperant-white': 'rgba(255, 255, 255, 0.04)',
+        'black-text': '#1F1F24'
       },
       borderWidth: {
         3: '3px'
       },
       transitionDuration: {
         DEFAULT: '300ms'
+      },
+      borderRadius: {
+        'circle': '50%'
+      },
+      width: {
+        18: '4.5rem'
+      },
+      height: {
+        18: '4.5rem'
       }
     },
   },

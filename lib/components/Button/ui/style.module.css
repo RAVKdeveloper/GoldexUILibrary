@@ -13,6 +13,11 @@
   hover:bg-secondary-btn-bg-hover transition;
 }
 
+.button.critical {
+  @apply bg-critical-bg text-secondary-btn-text border-secondary-border-color
+  hover:bg-critical-bg-hover transition;
+}
+
 .button.md {
   @apply text-sm px-4 py-3;
 }
@@ -39,6 +44,10 @@
 
 .button.secondary.active {
   @apply bg-secondary-btn-bg-hover;
+}
+
+.button.critical.active {
+  @apply bg-critical-bg-active;
 }
 
 .button.onlyIcon.md {

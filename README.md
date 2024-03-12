@@ -17,9 +17,7 @@ export function Component() {
      
    return (
        
-       <div>
-         <Button>Button Goldex</Button>
-       </div>
+         < Button >Button Goldex< /Button > 
    )  
 }
 </pre>

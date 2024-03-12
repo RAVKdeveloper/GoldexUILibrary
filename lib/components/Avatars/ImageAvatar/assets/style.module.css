@@ -1,0 +1,24 @@
+.root {
+  @apply rounded-circle relative;
+}
+
+.root.lg {
+  @apply w-18 h-18;
+}
+
+.root.sm {
+  @apply w-7 h-7;
+}
+
+.img {
+  @apply object-cover rounded-circle select-none;
+}
+
+.close {
+  @apply w-4.5 h-4.5 absolute top-0.5 right-1
+    bg-black-text border border-transperant-white rounded-circle flex items-center justify-center cursor-pointer opacity-0 transition;
+}
+
+.root:hover .close {
+  @apply opacity-100 transition;
+}

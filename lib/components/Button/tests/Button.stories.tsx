@@ -41,6 +41,16 @@ export const BasicSecondary: Story = {
     },
 };
 
+export const BasicCritical: Story = {
+    args: {
+       children: 'Button',
+       disabled: false,
+       variant: 'critical',
+       size: 'lg',
+       isActive: false
+    },
+};
+
 export const PrimaryWithIcon: Story = {
     args: {
        children: 'Button',
@@ -63,6 +73,17 @@ export const SecondaryWithIcon: Story = {
     },
 }
 
+export const CriticalWithIcon: Story = {
+    args: {
+       children: 'Button',
+       disabled: false,
+       variant: 'critical',
+       size: 'lg',
+       icon: <CircleIcon width={20} height={20} />,
+       isActive: false
+    },
+}
+
 export const PrimaryIconBtn: Story = {
     args: {
        disabled: false,
@@ -77,6 +98,16 @@ export const SecondaryIconBtn: Story = {
     args: {
        disabled: false,
        variant: 'secondary',
+       size: 'lg',
+       icon: <CircleIcon width={20} height={20} />,
+       isActive: false
+    }
+}
+
+export const CriticalIconBtn: Story = {
+    args: {
+       disabled: false,
+       variant: 'critical',
        size: 'lg',
        icon: <CircleIcon width={20} height={20} />,
        isActive: false

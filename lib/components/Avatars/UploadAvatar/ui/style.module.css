@@ -1,0 +1,4 @@
+.root {
+  @apply p-6 rounded-circle bg-transperant-white flex items-start justify-center 
+  pb-0.5 w-18 h-18 select-none cursor-pointer;
+}

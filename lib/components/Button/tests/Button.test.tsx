@@ -64,6 +64,20 @@ describe('tests Button component', () => {
 
     })
 
+    it('click test and render critical', () => {
+
+        const user = userEvent.setup()
+
+        render(
+            <Button variant='critical' size='lg'> 
+                Button
+            </Button>
+        )
+
+        user.click(screen.getByRole('button', {name: /Button/i}))
+
+    })
+
     it('render with icon and click', () => {
 
         const user = userEvent.setup()

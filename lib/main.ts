@@ -20,3 +20,4 @@ export {
     FilterIcon,
     DowloandIcon
 } from './components/Icons/components/Info/index'
+export { TextAvatar, UploadAvatar, ImageAvatar } from './components/Avatars/index'
