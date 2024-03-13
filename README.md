@@ -21,3 +21,8 @@ export function Component() {
    )  
 }
 </pre>
+
+# Links
+
+<a href='https://github.com/RAVKdeveloper/GoldexUILibrary' target='_blank'>Github</a>
+<a href='https://www.npmjs.com/package/goldex-ui-library?activeTab=readme' target='_blank'>NPM</a>

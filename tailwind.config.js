@@ -35,7 +35,13 @@ export default {
         'avatar-purple': '#8937F2',
         'avatar-pink': '#F94FB5',
         'transperant-white': 'rgba(255, 255, 255, 0.04)',
-        'black-text': '#1F1F24'
+        'black-text': '#1F1F24',
+        'text-success': '#17B26A',
+        'bg-succes': 'rgba(23, 178, 106, 0.14)',
+        'text-caution': '#F79009',
+        'bg-caution': 'rgba(247, 144, 9, 0.14)',
+        'text-critical': '#F04438',
+        'bg-critical': 'rgba(239, 68, 68, 0.15)'
       },
       borderWidth: {
         3: '3px'

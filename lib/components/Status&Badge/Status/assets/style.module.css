@@ -1,0 +1,19 @@
+.status {
+  @apply inline-flex items-center gap-1 py-1 px-2 rounded-full max-w-24 text-xs font-medium select-none;
+}
+
+.status.paid {
+  @apply bg-bg-succes text-text-success;
+}
+
+.status.wait {
+  @apply bg-bg-caution text-text-caution;
+}
+
+.status.rejected {
+  @apply bg-bg-critical text-text-critical;
+}
+
+.status.expired {
+  @apply bg-bg-critical text-text-critical;
+}

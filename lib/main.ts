@@ -21,3 +21,4 @@ export {
     DowloandIcon
 } from './components/Icons/components/Info/index'
 export { TextAvatar, UploadAvatar, ImageAvatar } from './components/Avatars/index'
+export { Status } from './components/Status&Badge/Status/ui/Status.ui'
