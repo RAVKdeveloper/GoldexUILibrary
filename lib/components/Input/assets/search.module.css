@@ -1,0 +1,20 @@
+.wrapper {
+  @apply relative;
+}
+
+.root {
+  @apply w-80 h-11 outline-none rounded-xl pt-3 pb-4 pr-3 pl-9
+  flex items-center border-2 border-transperant-white text-sm 
+   placeholder:text-text-white placeholder:opacity-40
+   bg-primary-btn-text text-text-white
+   hover:border-bg-accent transition
+   focus:border-bg-accent focus:shadow-input placeholder:select-none;
+}
+
+.icon {
+  @apply absolute top-3 left-3;
+}
+
+.wrapper.dis {
+  @apply opacity-60 pointer-events-none;
+}

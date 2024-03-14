@@ -1,5 +1,5 @@
 export { Button } from './components/Button/ui/Button'
-export { Input } from './components/Input/Input'
+export { TextField } from './components/Input/TextField.ui'
 export { LogoIcon, UsdtIcon, CircleIcon, ArrowBottomIcon, ArrowTopIcon } from './components/Icons/components/Main/index'
 export { 
     DashBoardFullIcon,
@@ -22,3 +22,5 @@ export {
 } from './components/Icons/components/Info/index'
 export { TextAvatar, UploadAvatar, ImageAvatar } from './components/Avatars/index'
 export { Status } from './components/Status&Badge/Status/ui/Status.ui'
+export { Badge } from './components/Status&Badge/Badge/Badge.ui'
+export { ProfileCard, BalanceCard } from './components/Cards'

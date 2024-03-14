@@ -1,0 +1,19 @@
+.root {
+  @apply w-56 h-16 bg-transperant-white rounded-xl flex items-center justify-between px-3 py-2 cursor-pointer select-none;
+}
+
+.content {
+  @apply flex flex-col;
+}
+
+.balance {
+  @apply text-text-white text-xl font-medium;
+}
+
+.currency {
+  @apply text-xs font-medium text-text-white opacity-40;
+}
+
+.bgIcon {
+  @apply bg-primary-btn-text p-1.5 rounded-xl;
+}

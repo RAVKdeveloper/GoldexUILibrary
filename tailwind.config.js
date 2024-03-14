@@ -34,6 +34,7 @@ export default {
         'avatar-blue': '#3782F2',
         'avatar-purple': '#8937F2',
         'avatar-pink': '#F94FB5',
+        'text-white': '#ffffff',
         'transperant-white': 'rgba(255, 255, 255, 0.04)',
         'black-text': '#1F1F24',
         'text-success': '#17B26A',
@@ -41,7 +42,8 @@ export default {
         'text-caution': '#F79009',
         'bg-caution': 'rgba(247, 144, 9, 0.14)',
         'text-critical': '#F04438',
-        'bg-critical': 'rgba(239, 68, 68, 0.15)'
+        'bg-critical': 'rgba(239, 68, 68, 0.15)',
+        'bg-accent': '#73E5CF'
       },
       borderWidth: {
         3: '3px'
@@ -53,10 +55,16 @@ export default {
         'circle': '50%'
       },
       width: {
-        18: '4.5rem'
+        18: '4.5rem',
+        55: '13.5rem',
+        67: '16.75rem',
+        73: '18.5rem'
       },
       height: {
         18: '4.5rem'
+      },
+      boxShadow: {
+        'input': '0px 0px 1px 2px rgba(255,255,255,0.14);'
       }
     },
   },

@@ -1,0 +1,11 @@
+.root {
+  @apply w-67 h-5 flex items-center justify-between select-none;
+}
+
+.iconsRow {
+  @apply flex items-center gap-2;
+}
+
+.text {
+  @apply text-text-white;
+}

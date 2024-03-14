@@ -1,0 +1,15 @@
+.root {
+  @apply inline-flex flex-col gap-1;
+}
+
+.text {
+  @apply text-sm  text-text-white opacity-40;
+}
+
+.text.error {
+  @apply text-text-critical opacity-100;
+}
+
+.label {
+  @apply text-text-white text-sm font-medium opacity-40;
+}
