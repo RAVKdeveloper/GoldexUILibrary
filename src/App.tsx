@@ -1,4 +1,4 @@
-import { Textarea } from "../lib/main" 
+import { Textarea, Pagination } from "../lib/main" 
 
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
         label="Text"
         helpText="Help Text"
        />
+       <Pagination currentPage={10} pages={10} textContent="Page 2 of 10" />
     </div>
   )
 }

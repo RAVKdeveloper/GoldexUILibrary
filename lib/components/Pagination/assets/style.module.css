@@ -1,0 +1,11 @@
+.root {
+  @apply w-120 h-18 flex items-center justify-between gap-2 bg-bg-primary py-4 px-5;
+}
+
+.content {
+  @apply text-text-white opacity-40 text-sm font-medium;
+}
+
+.btnRow {
+  @apply flex items-center gap-2;
+}
