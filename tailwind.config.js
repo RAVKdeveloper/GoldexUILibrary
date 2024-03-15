@@ -43,7 +43,8 @@ export default {
         'bg-caution': 'rgba(247, 144, 9, 0.14)',
         'text-critical': '#F04438',
         'bg-critical': 'rgba(239, 68, 68, 0.15)',
-        'bg-accent': '#73E5CF'
+        'bg-accent': '#73E5CF',
+        'bg-primary': '#1F1F24'
       },
       borderWidth: {
         3: '3px'
@@ -61,7 +62,11 @@ export default {
         73: '18.5rem'
       },
       height: {
-        18: '4.5rem'
+        18: '4.5rem',
+        22: '5.65rem'
+      },
+      minHeight: {
+        22: '5.65rem'
       },
       boxShadow: {
         'input': '0px 0px 1px 2px rgba(255,255,255,0.14);'

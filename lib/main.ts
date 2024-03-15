@@ -24,3 +24,4 @@ export { TextAvatar, UploadAvatar, ImageAvatar } from './components/Avatars/inde
 export { Status } from './components/Status&Badge/Status/ui/Status.ui'
 export { Badge } from './components/Status&Badge/Badge/Badge.ui'
 export { ProfileCard, BalanceCard } from './components/Cards'
+export { Textarea } from './components/Textarea/ui/Textarea.ui'

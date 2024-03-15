@@ -1,0 +1,38 @@
+.root {
+  @apply inline-flex flex-col gap-1.5;
+}
+
+.label {
+  @apply text-text-white text-sm font-medium opacity-40;
+}
+
+.textarea {
+  @apply w-80 min-h-22 outline-none resize-none rounded-xl p-3 bg-bg-primary
+  placeholder:text-text-white placeholder:opacity-40
+  border-2 border-transperant-white text-sm text-text-white
+  hover:border-bg-accent transition
+  focus:border-bg-accent focus:shadow-input
+  placeholder:select-none;
+}
+
+.textarea.error {
+  @apply border-critical-bg
+hover:border-bg-accent transition
+focus:border-bg-accent;
+}
+
+.textarea.dis {
+  @apply opacity-60 pointer-events-none;
+}
+
+.textarea::-webkit-scrollbar {
+  @apply w-0;
+}
+
+.text {
+  @apply text-sm  text-text-white opacity-40;
+}
+
+.text.error {
+  @apply text-text-critical opacity-100;
+}
