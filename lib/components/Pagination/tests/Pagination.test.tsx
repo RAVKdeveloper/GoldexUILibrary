@@ -11,7 +11,13 @@ describe('testing Pagination component', () => {
 
     it('render with current page 1', () => {
 
-        render(<Pagination currentPage={1} pages={10} textContent='Page 1 of 10' />)
+        render(<Pagination 
+                currentPage={1} 
+                pages={10} 
+                textContent='Page 1 of 10' 
+                next={() => console.log('next')}
+                back={() => console.log('prev')}
+                />)
 
         const elementPrevBtn = screen.getByText(/Back/i)
         const elementNextBtn = screen.getByText(/Next/i)
@@ -25,7 +31,13 @@ describe('testing Pagination component', () => {
 
     it('render with current page 3', () => {
 
-        render(<Pagination currentPage={3} pages={10} textContent='Page 3 of 10' />)
+        render(<Pagination 
+                currentPage={3} 
+                pages={10} 
+                textContent='Page 3 of 10' 
+                next={() => console.log('next')}
+                back={() => console.log('prev')}
+                />)
 
         const elementPrevBtn = screen.getByText(/Back/i)
         const elementNextBtn = screen.getByText(/Next/i)
@@ -40,7 +52,13 @@ describe('testing Pagination component', () => {
 
     it('render with current page 10', () => {
 
-        render(<Pagination currentPage={10} pages={10} textContent='Page 3 of 10' />)
+        render(<Pagination 
+                currentPage={10} 
+                pages={10} 
+                textContent='Page 3 of 10' 
+                next={() => console.log('next')}
+                back={() => console.log('prev')}
+                />)
 
         const elementPrevBtn = screen.getByText(/Back/i)
         const elementNextBtn = screen.getByText(/Next/i)

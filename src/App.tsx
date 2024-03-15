@@ -12,7 +12,13 @@ function App() {
         label="Text"
         helpText="Help Text"
        />
-       <Pagination currentPage={10} pages={10} textContent="Page 2 of 10" />
+       <Pagination 
+        currentPage={9} 
+        pages={10} 
+        textContent="Page 9 of 10" 
+        next={() => console.log('next')}
+        back={() => console.log('prev')}
+        />
     </div>
   )
 }

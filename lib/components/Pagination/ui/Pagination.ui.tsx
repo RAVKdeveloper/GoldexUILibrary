@@ -9,7 +9,7 @@ import s from '../assets/style.module.css'
 
 
 export const Pagination: FC<PaginationType> = ({ 
-    currentPage, pages, btnPrev = 'Back', btnNext = 'Next', textContent
+    currentPage, pages, btnPrev = 'Back', btnNext = 'Next', textContent, next, back
 }) => {
 
     const { isBack, isNext } = usePagination(currentPage, pages)
@@ -25,6 +25,7 @@ export const Pagination: FC<PaginationType> = ({
                 variant='secondary' 
                 size='sm' 
                 disabled={!isBack}
+                onClick={back}
                 >
                  {btnPrev}
                </Button>
@@ -32,6 +33,7 @@ export const Pagination: FC<PaginationType> = ({
                 variant='secondary' 
                 size='sm'
                 disabled={!isNext}
+                onClick={next}
                 >
                  {btnNext}
                </Button>

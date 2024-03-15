@@ -4,4 +4,6 @@ export interface PaginationType {
     btnPrev?: string
     btnNext?: string
     textContent: string
+    next: () => void
+    back: () => void
 }
