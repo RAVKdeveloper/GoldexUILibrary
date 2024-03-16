@@ -13,7 +13,9 @@ export const useNavItem = (key: number): {
 
     const [ isOpen, setIsOpen ] = useState<IsOpenType>({ isOpen: false, keyOpen: null })
 
-    const open = () => setIsOpen({ isOpen: !isOpen.isOpen, keyOpen: key })
+    const open = () => {
+      setIsOpen({ isOpen: !isOpen.isOpen, keyOpen: key })
+    } 
 
     return {
         open,

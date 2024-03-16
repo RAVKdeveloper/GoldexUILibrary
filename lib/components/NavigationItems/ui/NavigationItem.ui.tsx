@@ -8,7 +8,7 @@ import s from '../assets/style.module.css'
 
 
 export const NavigationItem: FC<NavigationItemType> = ({
-    Icon, listNodes, badge, isEnd = false, text, isActive = false, disabled = false, type = 'main', keyOpen = 0
+    Icon, listNodes, badge, isEnd = false, text, isActive = false, disabled = false, type = 'main', keyOpen = 0, auto = false
 }) => {
 
     const { open, isOpen } = useNavItem(keyOpen)
@@ -22,7 +22,7 @@ export const NavigationItem: FC<NavigationItemType> = ({
          ${s.root} 
          ${s[type]}
          ${isActive && s.active}
-         ${type === 'list' ? isOpenedList && s.active : ''} 
+         ${auto && isOpenedList && s.active}
          ${disabled && s.dis}
          ${Icon ? '' : isEnd ? s.endBorder : s.middleBorder}
          `}>
@@ -32,7 +32,7 @@ export const NavigationItem: FC<NavigationItemType> = ({
                 <Icon 
                  width={20} 
                  height={20} 
-                 opacity={isActive || isOpenedList ? 1 : 0.4} 
+                 opacity={isActive || (isOpenedList && auto) ? 1 : 0.4} 
                  /> 
             }    
             {text}

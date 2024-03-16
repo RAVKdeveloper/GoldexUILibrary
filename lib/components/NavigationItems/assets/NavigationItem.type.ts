@@ -12,4 +12,5 @@ export interface NavigationItemType {
     disabled?: boolean
     type?: 'main' | 'list'
     keyOpen?: number
+    auto?: boolean
 }
