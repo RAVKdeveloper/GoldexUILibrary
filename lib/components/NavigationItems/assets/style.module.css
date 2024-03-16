@@ -1,0 +1,51 @@
+.wrapper {
+  @apply list-none flex flex-col;
+}
+
+.root {
+  @apply list-none w-53 h-9 bg-bg-primary rounded-xl py-2 pl-3 pr-3 relative
+  flex items-center gap-2 justify-between select-none cursor-pointer transition
+  hover:bg-transperant-white
+  text-sm font-medium text-text-white text-opacity-40
+  hover:text-opacity-100;
+}
+
+.root.middleBorder {
+  @apply pl-10 after:bg-transperant-white after:h-9 after:w-0.25
+  after:absolute after:left-3.5 after:top-0 before:w-2.5 before:h-0.25
+  before:absolute before:left-4 before:top-2/4 before:bg-transperant-white;
+}
+
+.root.endBorder {
+  @apply pl-10 after:bg-transperant-white after:h-5 after:w-0.25
+  after:absolute after:left-3.5 after:top-0 before:w-2.5 before:h-0.25
+  before:absolute before:left-4 before:top-2/4 before:bg-transperant-white;
+}
+
+.content {
+  @apply flex items-center gap-2;
+}
+
+.root.main.active {
+  @apply text-opacity-100 bg-transperant-white;
+}
+
+.root.list.active {
+  @apply text-opacity-100;
+}
+
+.root.dis {
+  @apply opacity-10 hover:bg-bg-primary pointer-events-none;
+}
+
+.badge {
+  @apply opacity-100 text-bg-primary;
+}
+
+.listNodes {
+  @apply opacity-0 transition-opacity pointer-events-none h-0;
+}
+
+.listNodes.open {
+  @apply opacity-100 transition-opacity pointer-events-auto h-auto;
+}

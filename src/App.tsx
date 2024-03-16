@@ -1,25 +1,30 @@
-import { Textarea, Pagination } from "../lib/main" 
+import { NavigationItem } from '../lib/main' 
+import { LeadIcon } from 'goldex-icon-library'
+import { Badge } from '../lib/main'
 
 
 function App() {
 
   return (
-    <div style={{ margin: 20, background: '#1F1F24', padding: 20 }}>
-       <Textarea 
-        isError={false}
-        disabled={false}
-        placeholder="Textarea" 
-        label="Text"
-        helpText="Help Text"
+    <ul style={{ margin: 20, background: '#1F1F24', padding: 20, height: 1000 }}>
+       <NavigationItem 
+         keyOpen={1}
+         text='Dashboard'
+         Icon={LeadIcon}
+         isActive={true}
+         disabled={false}
+         badge={<Badge text='14' />}
+         type='list'
+         isEnd={false}
+         listNodes={
+          <>
+           <NavigationItem type='main' text='Name item' />
+           <NavigationItem type='main' text='Name item' isActive={true} badge={<Badge text='14' />}  />
+           <NavigationItem type='main' text='Name item' isEnd={true} />
+          </>
+         }
        />
-       <Pagination 
-        currentPage={9} 
-        pages={10} 
-        textContent="Page 9 of 10" 
-        next={() => console.log('next')}
-        back={() => console.log('prev')}
-        />
-    </div>
+    </ul>
   )
 }
 
