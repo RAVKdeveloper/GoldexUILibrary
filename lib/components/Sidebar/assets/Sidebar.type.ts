@@ -31,4 +31,5 @@ export interface SidebarType {
     timeRemaining: string | number
     notifications: NotificationsType
     links: ObjLinks
+    cbAvatar?: () => void
 }

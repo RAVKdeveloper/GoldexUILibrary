@@ -53,18 +53,22 @@ export default {
         DEFAULT: '300ms'
       },
       borderRadius: {
-        'circle': '50%'
+        'circle': '50%',
+        'x': '0.625rem'
       },
       width: {
+        17: '4.187rem',
         18: '4.5rem',
+        33: '8.312rem',
         55: '13.5rem',
         67: '16.75rem',
         73: '18.5rem',
         120: '31.25rem',
         53: '13.25rem',
-        61: '15.312rem'
+        61: '15.312rem',
       },
       height: {
+        7: '1.625rem',
         18: '4.5rem',
         22: '5.65rem'
       },

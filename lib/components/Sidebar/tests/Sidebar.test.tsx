@@ -51,7 +51,7 @@ describe('testing Sidebar component', () => {
              <SidebarMobile 
               userName='Regexer'
               avatarUrl='/53453'
-              onOpenSidebar={() => console.log('click')}
+              onOpenSidebar={() => confirm('click')}
              />
          </MemoryRouter>
         )

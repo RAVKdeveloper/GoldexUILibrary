@@ -15,7 +15,7 @@ describe('testing ProfileCard component', () => {
             avatarNickName="Test"
             avatarUrl="https://th.bing.com/th/id/OIP.kBYYR1K4b69A9FLskKJXOAHaHa?rs=1&pid=ImgDetMain"
             avatarRole="Operator"
-            cbOptions={() => console.log('hello')}
+            cbOptions={() => confirm('hello')}
             />
         )
 
@@ -35,7 +35,7 @@ describe('testing ProfileCard component', () => {
             avatarNickName="Test"
             avatarUrl="https://th.bing.com/th/id/OIP.kBYYR1K4b69A9FLskKJXOAHaHa?rs=1&pid=ImgDetMain"
             avatarRole="Operator"
-            cbOptions={() => console.log('hello')}
+            cbOptions={() => confirm('hello')}
             />
         )
 

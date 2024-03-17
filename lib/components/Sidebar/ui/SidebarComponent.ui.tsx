@@ -13,7 +13,7 @@ import s from '../assets/sidebar.module.css'
 
 
 export const Sidebar: FC<SidebarType> = ({
-    balanceUSDT, balanceRub, notifications, timeRemaining, links, user
+    balanceUSDT, balanceRub, notifications, timeRemaining, links, user, cbAvatar
 }) => {
 
     const { pathname } = useLocation()
@@ -60,7 +60,7 @@ export const Sidebar: FC<SidebarType> = ({
               avatarNickName={user.name}
               avatarRole={user.role}
               avatarUrl={user.url}
-              cbOptions={() => console.log('hello')}
+              cbOptions={() => cbAvatar?.()}
             />
             <div className={s.remainingCard}>
                 {timeRemaining}

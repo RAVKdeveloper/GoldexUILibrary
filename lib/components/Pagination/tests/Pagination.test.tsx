@@ -15,8 +15,8 @@ describe('testing Pagination component', () => {
                 currentPage={1} 
                 pages={10} 
                 textContent='Page 1 of 10' 
-                next={() => console.log('next')}
-                back={() => console.log('prev')}
+                next={() => alert('next')}
+                back={() => alert('prev')}
                 />)
 
         const elementPrevBtn = screen.getByText(/Back/i)
@@ -35,8 +35,8 @@ describe('testing Pagination component', () => {
                 currentPage={3} 
                 pages={10} 
                 textContent='Page 3 of 10' 
-                next={() => console.log('next')}
-                back={() => console.log('prev')}
+                next={() => alert('next')}
+                back={() => alert('prev')}
                 />)
 
         const elementPrevBtn = screen.getByText(/Back/i)
@@ -56,8 +56,8 @@ describe('testing Pagination component', () => {
                 currentPage={10} 
                 pages={10} 
                 textContent='Page 3 of 10' 
-                next={() => console.log('next')}
-                back={() => console.log('prev')}
+                next={() => alert('next')}
+                back={() => alert('prev')}
                 />)
 
         const elementPrevBtn = screen.getByText(/Back/i)

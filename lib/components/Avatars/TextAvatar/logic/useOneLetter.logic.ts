@@ -13,6 +13,7 @@ export const useOneLetter = (name: string ): string => {
        
         if(name) transform()
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [ name ])
 
     return value

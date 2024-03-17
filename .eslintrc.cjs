@@ -9,6 +9,8 @@ module.exports = {
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
-    ]
+    ],
+    'prefer-const': 'error',
+    'no-console': 'warn'
   },
 }

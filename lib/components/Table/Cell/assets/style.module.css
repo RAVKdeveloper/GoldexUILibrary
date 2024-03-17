@@ -1,0 +1,4 @@
+.root {
+  @apply py-4.5 px-4 bg-bg-primary text-sm text-text-white min-w-40
+  inline-flex items-center justify-center gap-3;
+}
