@@ -28,11 +28,11 @@ function App() {
           }
         }
        />
-       {/* <SidebarMobile 
+       <SidebarMobile 
          avatarUrl='/user'
          userName='HUEHUHQWHIU'
          onOpenSidebar={() => confirm('wertkewtrjeoj')}
-       /> */}
+       />
     </ul>
   )
 }
