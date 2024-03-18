@@ -1,0 +1,12 @@
+.root {
+  @apply w-5 h-5 rounded-md bg-bg-primary border border-secondary-btn-bg-hover select-none cursor-pointer
+  hover:bg-transperant-white transition flex items-center justify-center;
+}
+
+.root.selected {
+  @apply bg-bg-accent;
+}
+
+.root.dis {
+  @apply opacity-50 pointer-events-none;
+}

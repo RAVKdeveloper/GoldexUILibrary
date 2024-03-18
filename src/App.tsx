@@ -1,19 +1,23 @@
-import { ModalActions } from '../lib/main'
+import { Dropdown } from '../lib/main'
+import { LeadIcon } from 'goldex-icon-library'
+
 
 function App() {
 
   return (
      <div style={{ padding: 20, background: '#1F1F24', width: 540 }}>
-         <ModalActions 
-          btnTextCancel='Cansel'
-          btnTextAction='Delete'
-          variant='delete'
-          align='vertical'
-          cbCansel={() => alert('')}
-          cbAction={() => alert('')}
+          <Dropdown 
+           placeholder='Placeholder'
+           icon={<LeadIcon width={18} height={18} />}
+           isToggle={true}
+           isActiveToggle={true}
+           disabled={false}
+           isSuccess={false}
+           active={false}
+           cbToggle={() => confirm('toggle')}
          />
      </div>      
-  )
+  )  
 }
 
 export default App

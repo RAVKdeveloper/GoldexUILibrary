@@ -1,0 +1,16 @@
+.root {
+  @apply bg-bg-primary w-5 h-5 rounded-circle border border-secondary-btn-bg-hover
+  hover:bg-transperant-white transition select-none cursor-pointer;
+}
+
+.root.selected {
+  @apply bg-bg-accent flex items-center justify-center;
+}
+
+.root.dis {
+  @apply opacity-50 pointer-events-none;
+}
+
+.dot {
+  @apply w-2 h-2 rounded-circle bg-bg-primary;
+}

@@ -1,0 +1,11 @@
+.root {
+  @apply flex items-center justify-between top-2 left-2.5 select-none cursor-pointer;
+}
+
+.left {
+  @apply flex items-center gap-2;
+}
+
+.text {
+  @apply text-text-white text-sm font-medium;
+}
