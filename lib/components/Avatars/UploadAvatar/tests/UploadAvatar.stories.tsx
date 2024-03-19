@@ -17,11 +17,14 @@ const meta: Meta<typeof UploadAvatar> = {
         )
     ],
     argTypes: {
-        AltText: {
-            description: 'Alt attribute text'
-        },
         onClick: {
             description: 'Option Click Handler',
+        },
+        size: {
+            defaultValue: 'md',
+            options: ['lg', 'md', 'sm', 'es'],
+            control: { type: 'radio' },
+            description: 'Size avatar component'
         }
     },
     parameters: {
@@ -33,9 +36,30 @@ export default meta;
 type Story = StoryObj<typeof UploadAvatar>;
 
 
-export const Basic: Story = {
+export const Large: Story = {
     args: {
-       AltText: 'upload avatar',
-       onClick: action('on-click')
+       onClick: action('on-click'),
+       size: 'lg'
     },
 };
+
+export const Middle: Story = {
+    args: {
+       onClick: action('on-click'),
+       size: 'md'
+    },
+}
+
+export const Small: Story = {
+    args: {
+       onClick: action('on-click'),
+       size: 'sm'
+    },
+}
+
+export const ExtraSmall: Story = {
+    args: {
+       onClick: action('on-click'),
+       size: 'es'
+    },
+}

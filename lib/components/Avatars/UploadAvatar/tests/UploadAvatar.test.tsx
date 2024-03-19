@@ -7,25 +7,57 @@ import { UploadAvatar } from '../ui/UploadAvatar.ui'
 
 describe('test UploadAvatar component', () => {
 
-    it('component render', () => {
+    it('component render large and click', () => {
 
-        render(<UploadAvatar AltText='upload avatar' />)
+        const user = userEvent.setup()
 
-        const element = screen.getByAltText(/upload avatar/i)
+        render(<UploadAvatar size='lg' />)
+
+        const element = screen.getByRole('article')
+
+        user.click(element)
 
         expect(element).toBeInTheDocument()
 
     })
 
-    it('component render and click', () => {
+    it('component render middle and click', () => {
 
         const user = userEvent.setup()
 
-        render(<UploadAvatar AltText='upload avatar' />)
+        render(<UploadAvatar size='md' />)
 
-        const element = screen.getByAltText(/upload avatar/i)
+        const element = screen.getByRole('article')
 
-        user.click(screen.getByRole('article'))
+        user.click(element)
+
+        expect(element).toBeInTheDocument()
+
+    })
+
+    it('component render small and click', () => {
+
+        const user = userEvent.setup()
+
+        render(<UploadAvatar size='sm' />)
+
+        const element = screen.getByRole('article')
+
+        user.click(element)
+
+        expect(element).toBeInTheDocument()
+
+    })
+
+    it('component render extrasmall and click', () => {
+
+        const user = userEvent.setup()
+
+        render(<UploadAvatar size='es' />)
+
+        const element = screen.getByRole('article')
+
+        user.click(element)
 
         expect(element).toBeInTheDocument()
 

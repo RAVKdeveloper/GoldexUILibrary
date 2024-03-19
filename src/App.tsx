@@ -1,22 +1,15 @@
-import { Spinner } from '../lib/main'
-// import { LeadIcon } from 'goldex-icon-library'
+import { ImageAvatar } from '../lib/main'
 
 
 function App() {
 
   return (
-     <div style={{ padding: 50, background: '#1F1F24', width: 540 }}>
-          {/* <Dropdown 
-           placeholder='Placeholder'
-           icon={<LeadIcon width={18} height={18} />}
-           isToggle={true}
-           isActiveToggle={true}
-           disabled={false}
-           isSuccess={false}
-           active={false}
-           cbToggle={() => confirm('toggle')}
-         /> */}
-         <Spinner size='lg' />
+     <div style={{ padding: 20, background: '#1F1F24' }}>
+        <ImageAvatar 
+         url='/lib/assets/img/Rectangle 1886testAvatar.svg' 
+         altText='Avatar' 
+         size='lg'
+        />
      </div>      
   )  
 }

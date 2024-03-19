@@ -1,4 +1,20 @@
 .root {
-  @apply p-6 rounded-circle bg-transperant-white flex items-start justify-center 
-  pb-0.5 w-18 h-18 select-none cursor-pointer;
+  @apply rounded-circle bg-transperant-white flex items-start justify-center 
+  pb-0.5 select-none cursor-pointer hover:bg-secondary-btn-bg-hover transition;
+}
+
+.root.lg {
+  @apply w-18 h-18 p-6;
+}
+
+.root.md {
+  @apply w-14 h-14 p-4.5;
+}
+
+.root.sm {
+  @apply w-10 h-10 p-3;
+}
+
+.root.es {
+  @apply w-7 h-7 p-2;
 }

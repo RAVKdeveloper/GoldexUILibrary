@@ -19,6 +19,12 @@ const meta: Meta<typeof TextAvatar> = {
         },
         auto: {
             description: 'Automatically extract the first letters from a word',
+        },
+        sizeType: {
+            defaultValue: 'md',
+            options: ['lg', 'md', 'sm', 'es'],
+            control: { type: 'radio' },
+            description: 'Sizes textavatar component'
         }
     }
 };
@@ -27,7 +33,7 @@ export default meta;
 type Story = StoryObj<typeof TextAvatar>;
 
 
-export const Basic: Story = {
+export const BasicMiddle: Story = {
     args: {
        name: 'R',
        bgColor: 'purple',
@@ -40,5 +46,33 @@ export const WithAuto: Story = {
        name: 'Worker',
        bgColor: 'pink',
        auto: true
+    },
+};
+
+
+export const Large: Story = {
+    args: {
+       name: 'R',
+       bgColor: 'purple',
+       auto: false,
+       sizeType: 'lg'
+    },
+};
+
+export const Small: Story = {
+    args: {
+       name: 'Worker',
+       bgColor: 'pink',
+       auto: true,
+       sizeType: 'sm'
+    },
+};
+
+export const ExtraSmall: Story = {
+    args: {
+       name: 'Worker',
+       bgColor: 'pink',
+       auto: true,
+       sizeType: 'es'
     },
 };

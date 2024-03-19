@@ -41,7 +41,7 @@ describe('tests ImageAvatar component', () => {
             />
            )
    
-           const element = screen.getByAltText(/remove/i)
+           const element = screen.getByTestId('remove')
 
            user.click(element)
 
@@ -63,5 +63,39 @@ describe('tests ImageAvatar component', () => {
            expect(element).toHaveAttribute('src', testingUrl)
 
     })
+
+    it('extrasmall version render', () => {
+
+      render(
+          <ImageAvatar 
+            url={testingUrl}
+            altText='image' 
+            size='es'
+          />
+         )
+ 
+         const element = screen.getByAltText(/image/i)
+
+         expect(element).toBeInTheDocument()
+         expect(element).toHaveAttribute('src', testingUrl)
+
+    })
+
+    it('large version render', () => {
+
+      render(
+          <ImageAvatar 
+            url={testingUrl}
+            altText='image' 
+            size='lg'
+          />
+         )
+ 
+         const element = screen.getByAltText(/image/i)
+
+         expect(element).toBeInTheDocument()
+         expect(element).toHaveAttribute('src', testingUrl)
+
+  })
 
 })

@@ -7,6 +7,14 @@
 }
 
 .root.sm {
+  @apply w-10 h-10;
+}
+
+.root.md {
+  @apply w-14 h-14;
+}
+
+.root.es {
   @apply w-7 h-7;
 }
 
@@ -15,8 +23,8 @@
 }
 
 .close {
-  @apply w-4.5 h-4.5 absolute top-0.5 right-1
-    bg-black-text border border-transperant-white rounded-circle flex items-center justify-center cursor-pointer opacity-0 transition;
+  @apply w-full h-full absolute top-0 right-0 left-0 bottom-0 cursor-pointer
+    bg-bg-primary bg-opacity-50 rounded-circle flex items-center justify-center cursor-pointer opacity-0 transition;
 }
 
 .root:hover .close {

@@ -6,4 +6,5 @@ export interface TextAvatarType extends HTMLAttributes<HTMLDivElement> {
       bgColor: BgColorType,
       name: string
       auto?: boolean
+      sizeType?: 'es' | 'sm' | 'md' | 'lg'
 }

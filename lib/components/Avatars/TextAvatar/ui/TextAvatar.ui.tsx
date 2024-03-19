@@ -5,7 +5,7 @@ import { useOneLetter } from '../logic/useOneLetter.logic'
 import type { TextAvatarType } from './TextAvatar.types'
 
 
-export const TextAvatar: FC<TextAvatarType> = ({ bgColor = 'green', name, auto = false, ...props}) => {
+export const TextAvatar: FC<TextAvatarType> = ({ bgColor = 'green', name, auto = false, sizeType = 'md', ...props}) => {
 
     const letter = useOneLetter(name)
 
@@ -18,13 +18,20 @@ export const TextAvatar: FC<TextAvatarType> = ({ bgColor = 'green', name, auto =
         lightPurple: 'bg-avatar-lightPurple'
     }
 
+    const classSizes = {
+       es: 'w-7 h-7 text-xs',
+       sm: 'w-10 h-10 text-lg',
+       md: 'w-14 h-14 text-2xl',
+       lg: 'w-18 h-18 text-3xl'
+    }
+
     return (
 
         <article 
          {...props} 
          className={`
-          w-7 h-7 rounded-circle select-none ${classsBg[bgColor]}
-           flex justify-center items-center font-medium text-xs pb-0.25
+           rounded-circle select-none ${classsBg[bgColor]} ${classSizes[sizeType]}
+           flex justify-center items-center font-medium pb-0.25 cursor-pointer
          `}
          >
             {
