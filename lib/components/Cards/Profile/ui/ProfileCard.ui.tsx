@@ -29,7 +29,9 @@ export const ProfileCard: FC<ProfileCardType> = ({
       >
         <MenuDotsIcon opacity={0.4} width={20} height={20} />
       </div>
-      {modal && isOpenModal && modal}
+      <div className={`${s.modal} ${modal && isOpenModal && s.open}`}>
+        {modal}
+      </div>
     </article>
   );
 };

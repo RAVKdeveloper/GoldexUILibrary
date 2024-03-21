@@ -1,0 +1,11 @@
+.root {
+  @apply w-55 rounded-xl border border-secondary-btn-bg-hover py-1.5 px-1.5 inline-block bg-bg-primary relative;
+}
+
+.lngModal {
+  @apply absolute top-0 -right-60 opacity-0 pointer-events-none transition;
+}
+
+.lngModal.open {
+  @apply opacity-100 pointer-events-auto transition;
+}

@@ -30,3 +30,11 @@
 .iconBody.active {
   @apply bg-secondary-btn-bg-hover;
 }
+
+.modal {
+  @apply opacity-0 pointer-events-none transition absolute -top-48 left-0;
+}
+
+.modal.open {
+  @apply opacity-100 pointer-events-auto transition;
+}
