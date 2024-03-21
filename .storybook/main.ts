@@ -1,4 +1,6 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+import path from "path";
+import { loadConfigFromFile, mergeConfig } from "vite";
 
 const config: StorybookConfig = {
   stories: [
@@ -20,9 +22,14 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  staticDirs: ['../lib/components/Icons/images', '../lib/assets/img'],
-  async viteFinal(config, options) {
-    return config;
+  staticDirs: ["../lib/components/Icons/images", "../lib/assets/img"],
+  async viteFinal(config: any) {
+    const {
+      // @ts-ignore
+      config: { resolve },
+      // @ts-ignore
+    } = await loadConfigFromFile(path.resolve(__dirname, "../vite.config.ts"));
+    return mergeConfig(config, { resolve });
   },
 };
 export default config;
