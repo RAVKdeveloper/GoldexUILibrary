@@ -1,0 +1,11 @@
+import { Toggle } from '../ui/Toggle.ui';
+import type { Meta, StoryObj } from '@storybook/react';
+declare const meta: Meta<typeof Toggle>;
+export default meta;
+type Story = StoryObj<typeof Toggle>;
+export declare const BasicLarge: Story;
+export declare const BasicSmall: Story;
+export declare const ActiveLarge: Story;
+export declare const ActiveSmall: Story;
+export declare const DisabledActive: Story;
+export declare const DisabledBasic: Story;

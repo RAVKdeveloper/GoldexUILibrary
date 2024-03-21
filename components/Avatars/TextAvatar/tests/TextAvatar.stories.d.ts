@@ -1,0 +1,10 @@
+import { TextAvatar } from '../ui/TextAvatar.ui';
+import type { Meta, StoryObj } from '@storybook/react';
+declare const meta: Meta<typeof TextAvatar>;
+export default meta;
+type Story = StoryObj<typeof TextAvatar>;
+export declare const BasicMiddle: Story;
+export declare const WithAuto: Story;
+export declare const Large: Story;
+export declare const Small: Story;
+export declare const ExtraSmall: Story;

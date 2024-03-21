@@ -1,0 +1,7 @@
+import{j as c}from"./jsx-runtime-DQ32znRX.js";const i="_button_ehvu1_1",d="_primary_ehvu1_11",_="_secondary_ehvu1_21",m="_critical_ehvu1_31",v="_md_ehvu1_41",p="_lg_ehvu1_49",y="_sm_ehvu1_57",b="_es_ehvu1_65",f="_disabled_ehvu1_73",h="_active_ehvu1_81",$="_onlyIcon_ehvu1_105",e={button:i,primary:d,secondary:_,critical:m,md:v,lg:p,sm:y,es:b,disabled:f,active:h,onlyIcon:$},l=({iconLocation:t="start",icon:n,children:s,variant:o,size:a,isActive:r,...u})=>c.jsxs("button",{className:`
+        ${e.button} 
+        ${`${e[o]} ${r?e.active:""}`} 
+        ${a?e[a]:e.md} 
+        ${u.disabled&&e.disabled}
+        ${n&&!s&&`${e.onlyIcon} ${a&&e[a]}`}
+        `,...u,children:[t==="start"&&n,s&&s,t==="end"&&n]});try{l.displayName="Button",l.__docgenInfo={description:"",displayName:"Button",props:{iconLocation:{defaultValue:{value:"start"},description:"",name:"iconLocation",required:!1,type:{name:"enum",value:[{value:'"end"'},{value:'"start"'}]}},icon:{defaultValue:null,description:"",name:"icon",required:!1,type:{name:"ReactNode"}},variant:{defaultValue:null,description:"",name:"variant",required:!0,type:{name:"enum",value:[{value:'"primary"'},{value:'"secondary"'},{value:'"critical"'}]}},size:{defaultValue:null,description:"",name:"size",required:!1,type:{name:"enum",value:[{value:'"md"'},{value:'"lg"'},{value:'"sm"'},{value:'"es"'}]}},isActive:{defaultValue:null,description:"",name:"isActive",required:!1,type:{name:"boolean"}}}}}catch{}export{l as B};

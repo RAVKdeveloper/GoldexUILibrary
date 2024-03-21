@@ -1,0 +1,15 @@
+import { Button } from '../ui/Button';
+import type { Meta, StoryObj } from '@storybook/react';
+declare const meta: Meta<typeof Button>;
+export default meta;
+type Story = StoryObj<typeof Button>;
+export declare const BasicPrimary: Story;
+export declare const BasicSecondary: Story;
+export declare const BasicCritical: Story;
+export declare const PrimaryWithIcon: Story;
+export declare const SecondaryWithIcon: Story;
+export declare const CriticalWithIcon: Story;
+export declare const PrimaryIconBtn: Story;
+export declare const SecondaryIconBtn: Story;
+export declare const CriticalIconBtn: Story;
+export declare const ActiveBtn: Story;

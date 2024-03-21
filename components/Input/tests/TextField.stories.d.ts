@@ -1,0 +1,12 @@
+import { TextField } from '../TextField.ui';
+import type { Meta, StoryObj } from '@storybook/react';
+declare const meta: Meta<typeof TextField>;
+export default meta;
+type Story = StoryObj<typeof TextField>;
+export declare const InputVariant: Story;
+export declare const InputVariantWithIcon: Story;
+export declare const InputVariantWithIconAndError: Story;
+export declare const SearchVariant: Story;
+export declare const SelectVariant: Story;
+export declare const SelectVariantWithIcon: Story;
+export declare const SelectVariantError: Story;

@@ -1,0 +1,1 @@
+import{j as o}from"./jsx-runtime-DQ32znRX.js";const a="_root_pco9p_1",s={root:a},t=({text:e,...r})=>o.jsx("div",{...r,className:s.root,children:e});try{t.displayName="Badge",t.__docgenInfo={description:"",displayName:"Badge",props:{text:{defaultValue:null,description:"",name:"text",required:!0,type:{name:"string"}}}}}catch{}export{t as B};

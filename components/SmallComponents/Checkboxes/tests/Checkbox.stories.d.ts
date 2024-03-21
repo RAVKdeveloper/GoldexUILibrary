@@ -1,0 +1,10 @@
+import { Checkbox } from '../ui/Checkbox.ui';
+import type { Meta, StoryObj } from '@storybook/react';
+declare const meta: Meta<typeof Checkbox>;
+export default meta;
+type Story = StoryObj<typeof Checkbox>;
+export declare const BasicPlus: Story;
+export declare const BasicMinus: Story;
+export declare const BasicPlusActive: Story;
+export declare const BasicMinusActive: Story;
+export declare const Disabled: Story;

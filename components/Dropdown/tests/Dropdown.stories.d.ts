@@ -1,0 +1,11 @@
+import { Dropdown } from '../Dropdown.ui';
+import type { Meta, StoryObj } from '@storybook/react';
+declare const meta: Meta<typeof Dropdown>;
+export default meta;
+type Story = StoryObj<typeof Dropdown>;
+export declare const Default: Story;
+export declare const DefaultActive: Story;
+export declare const DropdownWithIcon: Story;
+export declare const DropdownWithToggle: Story;
+export declare const DropdownWithCheckbox: Story;
+export declare const DropdownDisabled: Story;

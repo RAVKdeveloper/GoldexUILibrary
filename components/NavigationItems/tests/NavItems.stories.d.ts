@@ -1,0 +1,14 @@
+import { NavigationItem } from '../ui/NavigationItem.ui';
+import type { Meta, StoryObj } from '@storybook/react';
+declare const meta: Meta<typeof NavigationItem>;
+export default meta;
+type Story = StoryObj<typeof NavigationItem>;
+export declare const BasicMain: Story;
+export declare const BasicMainWithBadge: Story;
+export declare const BasicMainWithIcon: Story;
+export declare const ActiveMainWithIcon: Story;
+export declare const ActiveMainEnd: Story;
+export declare const BasicList: Story;
+export declare const ActiveList: Story;
+export declare const DisabledItem: Story;
+export declare const ItemsList: Story;
