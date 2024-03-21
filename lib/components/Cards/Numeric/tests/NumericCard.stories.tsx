@@ -1,4 +1,4 @@
-import { NumericCard } from "../..";
+import { NumericCard } from "../ui/NumericCard.ui";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
