@@ -1,0 +1,23 @@
+.root {
+  @apply py-4 px-5 bg-transperant-white rounded-xl inline-flex flex-col gap-5 min-w-90;
+}
+
+.content {
+  @apply flex flex-col;
+}
+
+.top {
+  @apply flex justify-between items-end;
+}
+
+.balance {
+  @apply font-medium text-3xl text-text-white;
+}
+
+.bottom {
+  @apply flex items-center justify-between text-xs text-text-white text-opacity-40 pt-0.5;
+}
+
+.chart {
+  @apply lg:block hidden h-20;
+}

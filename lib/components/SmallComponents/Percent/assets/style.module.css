@@ -1,0 +1,11 @@
+.root {
+  @apply flex items-center gap-0.5;
+}
+
+.top {
+  @apply text-xs text-text-success;
+}
+
+.down {
+  @apply text-xs text-text-critical;
+}

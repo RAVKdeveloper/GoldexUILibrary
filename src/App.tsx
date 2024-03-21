@@ -1,17 +1,18 @@
-import { ImageAvatar } from '../lib/main'
-
+import { NumericCard, Percent } from "../lib/main";
 
 function App() {
-
   return (
-     <div style={{ padding: 20, background: '#1F1F24' }}>
-        <ImageAvatar 
-         url='/lib/assets/img/Rectangle 1886testAvatar.svg' 
-         altText='Avatar' 
-         size='lg'
-        />
-     </div>      
-  )  
+    <div style={{ padding: 20, background: "#1F1F24" }}>
+      <Percent value={-10} />
+      <NumericCard
+        totalBalance={123424}
+        term="vs last month"
+        chart={<div />}
+        profitability={100}
+        textTotal="Total"
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;
