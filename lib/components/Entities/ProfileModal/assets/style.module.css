@@ -3,7 +3,7 @@
 }
 
 .lngModal {
-  @apply absolute top-0 -right-60 opacity-0 pointer-events-none transition;
+  @apply absolute top-0 -right-60 opacity-0 pointer-events-none transition z-50;
 }
 
 .lngModal.open {

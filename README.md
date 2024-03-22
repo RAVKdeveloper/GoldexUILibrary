@@ -8,6 +8,14 @@ Goldex design system
 npm i goldex-ui-library
 </pre>
 
+# Update 1.0.1:
+
+- Update Sidebar component
+- Update avatar components
+- Update cards components
+- Add new modals component
+- Publish storybook
+
 # Basic Usage
 
 <pre>
@@ -24,5 +32,14 @@ export function Component() {
 
 # Links
 
+<div>
+<p>
 <a href='https://github.com/RAVKdeveloper/GoldexUILibrary' target='_blank'>Github</a>
+</p>
+<p>
 <a href='https://www.npmjs.com/package/goldex-ui-library?activeTab=readme' target='_blank'>NPM</a>
+</p>
+<p>
+<a href='https://65fc19e68da4a5d17254f986-dfdklfstnv.chromatic.com/' target='_blank'>View components</a>
+</p>
+</div>
