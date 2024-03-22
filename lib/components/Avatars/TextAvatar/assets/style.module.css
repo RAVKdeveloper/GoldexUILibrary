@@ -1,0 +1,43 @@
+.root {
+  @apply rounded-circle select-none flex justify-center items-center font-medium pb-0.25 cursor-pointer;
+}
+
+.root.green {
+  @apply bg-avatar-green;
+}
+
+.root.pink {
+  @apply bg-avatar-pink;
+}
+
+.root.yellow {
+  @apply bg-avatar-yellow;
+}
+
+.root.blue {
+  @apply bg-avatar-blue;
+}
+
+.root.purple {
+  @apply bg-avatar-purple;
+}
+
+.root.lightPurple {
+  @apply bg-avatar-lightPurple;
+}
+
+.root.es {
+  @apply w-7 h-7 text-xs;
+}
+
+.root.sm {
+  @apply w-10 h-10 text-lg;
+}
+
+.root.md {
+  @apply w-14 h-14 text-2xl;
+}
+
+.root.lg {
+  @apply w-18 h-18 text-3xl;
+}
