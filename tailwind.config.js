@@ -55,6 +55,7 @@ export default {
       borderRadius: {
         circle: "50%",
         x: "0.625rem",
+        "2x": "1.25rem",
       },
       width: {
         17: "4.187rem",

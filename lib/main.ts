@@ -47,3 +47,4 @@ export { Dropdown } from "./components/Dropdown/Dropdown.ui";
 export { Spinner } from "./components/Spinner/ui/Spiner.ui";
 export { ProfileModal, LanguageModal } from "./components/Entities/index";
 export { Overflow } from "./components/Overflow/ui/Overflow.ui";
+export { Modal } from "./components/Modal/ui/Modal.ui";
