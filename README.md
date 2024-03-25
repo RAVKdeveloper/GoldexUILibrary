@@ -11,6 +11,7 @@ npm i goldex-ui-library
 # Update 1.0.4:
 
 - Update balance card component
+- Update sidebar component
 
 # Basic Usage
 
