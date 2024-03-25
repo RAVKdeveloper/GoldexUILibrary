@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { Link, useLocation } from "react-router-dom";
 
-import { LogoIcon } from "goldex-icon-library";
+import { LogoIcon, RubleIcon, USDTIcon } from "goldex-icon-library";
 import {
   BalanceCard,
   NavigationItem,
@@ -36,8 +36,16 @@ export const Sidebar: FC<SidebarType> = ({
       <div className={s.top}>
         <LogoIcon />
         <div className={s.balances}>
-          <BalanceCard balance={balanceRub} variant="rub" />
-          <BalanceCard balance={balanceUSDT} variant="usdt" />
+          <BalanceCard
+            balance={balanceRub}
+            icon={<RubleIcon />}
+            currency="RUB"
+          />
+          <BalanceCard
+            balance={balanceUSDT}
+            icon={<USDTIcon />}
+            currency="USDT"
+          />
         </div>
         <ul className={s.list}>
           {SidebarsNavItems.filter(({ lng }) => lng === activeLng).map(
