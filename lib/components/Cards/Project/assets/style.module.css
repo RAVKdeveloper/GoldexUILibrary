@@ -1,0 +1,56 @@
+.root {
+  @apply w-full h-16 bg-transperant-white rounded-xl py-3 px-4 
+  flex items-center justify-between gap-8;
+}
+
+.left {
+  @apply flex flex-col max-w-28 md:max-w-full gap-0.5;
+}
+
+.nameProject {
+  @apply text-sm text-text-white text-ellipsis overflow-hidden whitespace-nowrap;
+}
+
+.statusProject {
+  @apply text-xs text-text-white text-opacity-40 text-ellipsis overflow-hidden whitespace-nowrap;
+}
+
+.statusProject.blocked {
+  @apply text-text-critical;
+}
+
+.right {
+  @apply md:w-1/2 flex items-center md:justify-between w-full max-w-100 gap-8;
+}
+
+.turnoverColumn {
+  @apply flex flex-col gap-0.5 max-w-28;
+}
+
+.turnover {
+  @apply text-sm text-text-white text-ellipsis overflow-hidden whitespace-nowrap;
+}
+
+.textTurnover {
+  @apply text-xs text-text-white text-opacity-40 text-ellipsis overflow-hidden whitespace-nowrap;
+}
+
+.actions {
+  @apply flex md:w-1/2 w-full justify-between items-center;
+}
+
+.badgeRow {
+  @apply flex items-center gap-1.5 flex-col es:flex-row;
+}
+
+.minus {
+  @apply es:rounded-full es:py-1 es:px-1.5 es:bg-bg-critical es:bg-opacity-15;
+}
+
+.plus {
+  @apply es:rounded-full es:py-1 es:px-1.5 es:bg-bg-succes es:bg-opacity-15;
+}
+
+.optionsBody {
+  @apply p-2 rounded-lg hover:bg-transperant-white transition cursor-pointer;
+}

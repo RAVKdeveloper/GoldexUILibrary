@@ -38,6 +38,7 @@ export {
   BalanceCard,
   NumericCard,
   TransactionCard,
+  ProjectCard,
 } from "./components/Cards";
 export { Textarea } from "./components/Textarea/ui/Textarea.ui";
 export { Pagination } from "./components/Pagination/ui/Pagination.ui";
