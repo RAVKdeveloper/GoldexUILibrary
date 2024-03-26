@@ -25,6 +25,10 @@ const meta: Meta<typeof BalanceCard> = {
     currency: {
       description: "Name currency",
     },
+    height: {
+      defaultValue: "sm",
+      description: "Height card(94px or 64px)",
+    },
   },
 };
 
@@ -36,6 +40,7 @@ export const USDTCard: Story = {
     icon: <USDTIcon />,
     balance: 100000.0,
     currency: "USDT",
+    height: "sm",
   },
 };
 
@@ -44,5 +49,24 @@ export const RubleCard: Story = {
     icon: <RubleIcon />,
     balance: 100000.0,
     currency: "RUB",
+    height: "sm",
+  },
+};
+
+export const USDTCardBig: Story = {
+  args: {
+    icon: <USDTIcon />,
+    balance: 100000.0,
+    currency: "USDT",
+    height: "lg",
+  },
+};
+
+export const RubleCardBig: Story = {
+  args: {
+    icon: <RubleIcon />,
+    balance: 100000.0,
+    currency: "RUB",
+    height: "lg",
   },
 };

@@ -8,10 +8,11 @@ Goldex design system
 npm i goldex-ui-library
 </pre>
 
-# Update 1.0.4:
+# Update 1.0.5:
 
 - Update balance card component
-- Update sidebar component
+- Add transaction card
+- Add project card
 
 # Basic Usage
 
@@ -37,6 +38,6 @@ export function Component() {
 <a href='https://www.npmjs.com/package/goldex-ui-library?activeTab=readme' target='_blank'>NPM</a>
 </p>
 <p>
-<a href='https://65fc19e68da4a5d17254f986-dfdklfstnv.chromatic.com/' target='_blank'>View components</a>
+<a href='https://65fc19e68da4a5d17254f986-dgicjtdmso.chromatic.com/' target='_blank'>View components</a>
 </p>
 </div>

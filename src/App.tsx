@@ -1,24 +1,25 @@
-import { TransactionCard, ProjectCard } from "../lib/main";
+import { BalanceCard } from "../lib/main";
+import { USDTIcon, RubleIcon } from "goldex-icon-library";
 
 function App() {
   return (
-    <div className="bg-bg-primary h-72 p-9" style={{ width: "100%" }}>
-      <TransactionCard
-        variant="exchange"
-        date="10 ноя 2023, 08:23"
-        status="wait"
-        sum={3245}
-        language="ru"
+    <div
+      className="bg-bg-primary h-72 p-9 flex justify-between gap-4"
+      style={{ maxWidth: 1131 }}
+    >
+      <BalanceCard
+        balance={32423424}
+        currency="RUB"
+        height="lg"
+        icon={<RubleIcon />}
       />
-      <ProjectCard
-        name="Test Project wrwerewjtj0ietij0eti0eiherhithier"
-        status="blocked"
-        turnover={"3435,534,534 RUB"}
-        minus={-33}
-        plus={50}
-        textStatus="Блокировка"
-        textTurnover="Оборот за сутки"
+      <BalanceCard
+        balance={32423424}
+        currency="USDT TRC-20"
+        height="lg"
+        icon={<USDTIcon />}
       />
+      <BalanceCard balance={32423424} currency="Профит" height="lg" />
     </div>
   );
 }
