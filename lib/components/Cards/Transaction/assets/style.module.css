@@ -1,0 +1,47 @@
+.root {
+  @apply w-full h-16 bg-transperant-white rounded-xl py-3 px-4 flex justify-between items-center gap-4;
+}
+
+.left {
+  @apply flex items-center gap-3;
+}
+
+.iconBody {
+  @apply p-1.5 rounded-circle bg-transperant-white;
+}
+
+.column {
+  @apply flex flex-col gap-0.5;
+}
+
+.title {
+  @apply text-sm text-text-white font-normal;
+}
+
+.date {
+  @apply text-text-white text-opacity-40 text-xs;
+}
+
+.right {
+  @apply flex justify-between w-2/4 items-center max-w-80;
+}
+
+.dekstop {
+  @apply hidden md:block;
+}
+
+.mobile {
+  @apply block md:hidden;
+}
+
+.content {
+  @apply flex items-center md:justify-between md:w-2/4 gap-8;
+}
+
+.sum {
+  @apply text-sm text-text-white;
+}
+
+.optionsBody {
+  @apply p-2 rounded-lg hover:bg-transperant-white transition cursor-pointer;
+}
