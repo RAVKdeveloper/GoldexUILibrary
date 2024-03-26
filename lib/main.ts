@@ -33,7 +33,12 @@ export {
 } from "./components/Avatars/index";
 export { Status } from "./components/Status&Badge/Status/ui/Status.ui";
 export { Badge } from "./components/Status&Badge/Badge/Badge.ui";
-export { ProfileCard, BalanceCard, NumericCard } from "./components/Cards";
+export {
+  ProfileCard,
+  BalanceCard,
+  NumericCard,
+  TransactionCard,
+} from "./components/Cards";
 export { Textarea } from "./components/Textarea/ui/Textarea.ui";
 export { Pagination } from "./components/Pagination/ui/Pagination.ui";
 export { NavigationItem } from "./components/NavigationItems/ui/NavigationItem.ui";
