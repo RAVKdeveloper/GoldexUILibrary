@@ -79,8 +79,15 @@ export default {
       minWidth: {
         90: "23.0625rem",
       },
+      maxWidth: {
+        34: "137px",
+        100: "480px",
+      },
       boxShadow: {
         input: "0px 0px 1px 2px rgba(255,255,255,0.14);",
+      },
+      screens: {
+        es: "550px",
       },
     },
   },

@@ -1,4 +1,4 @@
-import { TransactionCard } from "../lib/main";
+import { TransactionCard, ProjectCard } from "../lib/main";
 
 function App() {
   return (
@@ -10,19 +10,14 @@ function App() {
         sum={3245}
         language="ru"
       />
-      <TransactionCard
-        variant="deposit"
-        date="10 ноя 2023, 08:23"
-        status="expired"
-        sum={3245}
-        language="ru"
-      />
-      <TransactionCard
-        variant="inference"
-        date="10 ноя 2023, 08:23"
-        status="paid"
-        sum={3245}
-        language="ru"
+      <ProjectCard
+        name="Test Project wrwerewjtj0ietij0eti0eiherhithier"
+        status="blocked"
+        turnover={"3435,534,534 RUB"}
+        minus={-33}
+        plus={50}
+        textStatus="Блокировка"
+        textTurnover="Оборот за сутки"
       />
     </div>
   );

@@ -15,6 +15,7 @@ export const TransactionCard: FC<TransactionCardType> = ({
   status,
   sum,
   language,
+  cbOptions,
 }) => {
   return (
     <article className={s.root}>
@@ -36,7 +37,11 @@ export const TransactionCard: FC<TransactionCardType> = ({
         </div>
         <div className={s.content}>
           <p className={s.sum}>+ {sum} RUB</p>
-          <div className={s.optionsBody} data-testid="clickOption">
+          <div
+            onClick={() => cbOptions?.()}
+            className={s.optionsBody}
+            data-testid="clickOption"
+          >
             <MenuDotsIcon width={20} height={20} opacity={0.4} />
           </div>
         </div>
