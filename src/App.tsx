@@ -1,9 +1,13 @@
-import { TextField } from "../lib/main";
+import { SidebarMobile } from "../lib/main";
 
 function App() {
   return (
     <div style={{ maxWidth: 500, padding: 20 }}>
-      <TextField />
+      <SidebarMobile
+        avatarUrl="/3"
+        userName="Rie"
+        onOpenSidebar={() => confirm("")}
+      />
     </div>
   );
 }
