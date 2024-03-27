@@ -18,6 +18,10 @@
   hover:bg-critical-bg-hover transition;
 }
 
+.button.full {
+  @apply w-full h-11 flex items-center justify-center pb-0.5;
+}
+
 .button.md {
   @apply text-sm px-4 py-3;
 }

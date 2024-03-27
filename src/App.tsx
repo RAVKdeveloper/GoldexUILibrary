@@ -1,13 +1,11 @@
-import { SidebarMobile } from "../lib/main";
+import { Button } from "../lib/main";
 
 function App() {
   return (
-    <div style={{ maxWidth: 500, padding: 20 }}>
-      <SidebarMobile
-        avatarUrl="/3"
-        userName="Rie"
-        onOpenSidebar={() => confirm("")}
-      />
+    <div style={{ maxWidth: 800, padding: 20 }}>
+      <Button variant="primary" size="full">
+        Login
+      </Button>
     </div>
   );
 }

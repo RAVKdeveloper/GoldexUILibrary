@@ -8,13 +8,9 @@ Goldex design system
 npm i goldex-ui-library
 </pre>
 
-# Update 1.0.7:
+# Update 1.0.8:
 
-- Update balance card component
-- Update Textarea component
-- Update mobile sidebar component
-- Add transaction card
-- Add project card
+- Update button component
 
 # Basic Usage
 
