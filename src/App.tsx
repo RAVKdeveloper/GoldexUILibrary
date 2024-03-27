@@ -1,25 +1,13 @@
-import { BalanceCard } from "../lib/main";
-import { USDTIcon, RubleIcon } from "goldex-icon-library";
+import { SidebarMobile } from "../lib/main";
 
 function App() {
   return (
-    <div
-      className="bg-bg-primary h-72 p-9 flex justify-between gap-4"
-      style={{ maxWidth: 1131 }}
-    >
-      <BalanceCard
-        balance={32423424}
-        currency="RUB"
-        height="lg"
-        icon={<RubleIcon />}
+    <div className="bg-bg-primary" style={{ maxWidth: 1131 }}>
+      <SidebarMobile
+        avatarUrl="/34"
+        userName="Rewr"
+        onOpenSidebar={() => confirm("erew")}
       />
-      <BalanceCard
-        balance={32423424}
-        currency="USDT TRC-20"
-        height="lg"
-        icon={<USDTIcon />}
-      />
-      <BalanceCard balance={32423424} currency="Профит" height="lg" />
     </div>
   );
 }
