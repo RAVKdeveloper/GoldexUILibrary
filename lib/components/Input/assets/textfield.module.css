@@ -1,5 +1,5 @@
 .root {
-  @apply inline-flex flex-col gap-1;
+  @apply inline-flex flex-col gap-1 w-full;
 }
 
 .text {

@@ -27,7 +27,7 @@
 }
 
 .root.es {
-  @apply w-7 h-7 text-xs;
+  @apply w-7 h-7.5 text-xs;
 }
 
 .root.sm {
