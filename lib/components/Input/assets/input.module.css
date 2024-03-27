@@ -1,9 +1,9 @@
 .wrapper {
-  @apply relative max-w-80;
+  @apply relative w-full;
 }
 
 .root {
-  @apply w-80 outline-none rounded-xl border-2 border-transperant-white text-sm 
+  @apply w-full outline-none rounded-xl border-2 border-transperant-white text-sm 
    placeholder:text-text-white placeholder:opacity-40
    bg-primary-btn-text text-text-white
    hover:border-bg-accent transition
