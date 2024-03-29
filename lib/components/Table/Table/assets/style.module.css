@@ -1,0 +1,11 @@
+.wrapper {
+  @apply overflow-x-auto rounded-t-2xl;
+}
+
+.root {
+  @apply border-spacing-0 border-separate  border rounded-t-2xl border-transparent overflow-hidden;
+}
+
+.cell {
+  @apply p-0 w-auto h-14 bg-bg-primary;
+}

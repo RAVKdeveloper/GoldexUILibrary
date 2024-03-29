@@ -1,6 +1,6 @@
-import { ReactNode } from 'react'
+import { ReactNode } from "react";
 
 export interface CellTableType {
-    text: string | ReactNode
-    icon?: ReactNode
+  text?: string | ReactNode;
+  icon?: ReactNode;
 }

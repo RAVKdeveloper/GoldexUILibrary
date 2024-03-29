@@ -1,4 +1,7 @@
 .root {
-  @apply py-4.5 px-4 bg-bg-primary text-sm text-text-white min-w-40
-  inline-flex items-center justify-center gap-3;
+  @apply py-4 px-4 bg-bg-primary text-sm font-normal min-w-32 text-text-white border-b border-transperant-white h-14 w-full;
+}
+
+.container {
+  @apply flex items-center text-nowrap gap-2 h-full w-full;
 }
