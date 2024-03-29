@@ -10,14 +10,20 @@ currently being supported with security updates.
 | 1.0.9   | :white_check_mark: |
 | 1.0.8   | :white_check_mark: |
 | 1.0.7   | :white_check_mark: |
-| 1.0.6   | :x:                |
+| 1.0.6   | :white_check_mark: |
 | 1.0.5   | :white_check_mark: |
 | < 1.0.4   | :x:                |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+Version < 1.0.4 does not support:
+```
+- Table component
+- Popup component
+- Sidebar component
+- Components of project and transaction cards
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Bugs in components:
+- Button component
+- Textfield component
+```
