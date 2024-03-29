@@ -1,5 +1,6 @@
 .root {
-  @apply w-33 h-10 py-2.5 px-4 bg-transperant-white text-xs font-medium
-  text-text-white text-opacity-40 border-b border-transperant-white
-  flex items-center justify-center gap-2;
+  @apply min-w-28 h-10 py-2.5 px-4 bg-transperant-white text-xs font-medium
+  text-text-white text-opacity-40 border-b border-transperant-white text-left;
 }
+
+/* w-33 */

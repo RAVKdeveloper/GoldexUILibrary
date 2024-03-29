@@ -1,11 +1,50 @@
-import React from "react";
+import { Table } from "../ui/Table.ui";
 
-import { Table, CellTable, Status, Pagination } from "../lib/main";
+import { CellTable, Status } from "../../../../main";
 import { UserInvoiceIcon, VisaIcon } from "goldex-icon-library";
 
-function App() {
-  const data = React.useMemo(
-    () => [
+import type { Meta, StoryObj } from "@storybook/react";
+
+const meta: Meta<typeof Table> = {
+  title: "Design System/Entities/Table",
+  component: Table,
+  tags: ["autodocs"],
+  argTypes: {
+    data: {
+      description:
+        "The cell data, the key in the objects, must be bound (have the same name) to the header accessor. Docs https://react-table-v7-docs.netlify.app/docs/installation",
+    },
+    columns: {
+      description:
+        "An array of objects describing, counting, and meaning of headings. The object should look like this:" +
+        `  
+        <pre> 
+        [ 
+            { 
+                Header: 'Header name', 
+                accessor: 'Key header' 
+            } 
+        ]
+        </pre>
+        ` +
+        "Cells are bound by the value of the key (accessor). ",
+    },
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ padding: 20, background: "#343741" }}>
+        <Story />
+      </div>
+    ),
+  ],
+};
+
+export default meta;
+type Story = StoryObj<typeof Table>;
+
+export const InvoicesTable: Story = {
+  args: {
+    data: [
       {
         col1: <CellTable text="#1011" />,
         col2: (
@@ -49,14 +88,10 @@ function App() {
         sum: <CellTable text="22 500 RUB" />,
       },
     ],
-    []
-  );
-
-  const columns = React.useMemo(
-    () => [
+    columns: [
       {
         Header: "ID",
-        accessor: "col1", // accessor is the "key" in the data
+        accessor: "col1",
       },
       {
         Header: "Банк клиента",
@@ -83,27 +118,5 @@ function App() {
         accessor: "sum",
       },
     ],
-    []
-  );
-
-  return (
-    <div style={{ padding: 20, background: "#343741" }}>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        {/* <div style={{ display: "block" }}> */}
-        <Table data={data} columns={columns} />
-        <Pagination
-          currentPage={1}
-          pages={10}
-          btnNext="Next"
-          btnPrev="Prev"
-          next={() => {}}
-          back={() => {}}
-          textContent="Page 1 of 10 pages"
-        />
-        {/* </div> */}
-      </div>
-    </div>
-  );
-}
-
-export default App;
+  },
+};

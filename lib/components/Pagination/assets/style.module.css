@@ -1,5 +1,5 @@
 .root {
-  @apply w-120 h-18 flex items-center justify-between gap-2 bg-bg-primary py-4 px-5;
+  @apply w-full h-18 flex items-center justify-between gap-2 bg-bg-primary py-4 px-5 rounded-b-2xl;
 }
 
 .content {
@@ -7,5 +7,7 @@
 }
 
 .btnRow {
-  @apply flex items-center gap-2;
+  @apply flex items-center gap-2 select-none;
 }
+
+/* w-120 */

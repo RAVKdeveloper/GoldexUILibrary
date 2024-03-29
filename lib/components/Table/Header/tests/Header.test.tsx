@@ -1,19 +1,14 @@
-import '@testing-library/jest-dom'
-import { render, screen } from '@testing-library/react'
+import "@testing-library/jest-dom";
+import { render, screen } from "@testing-library/react";
 
-import { HeaderTable } from '../ui/Header.ui'
+import { HeaderTable } from "../ui/Header.ui";
 
+describe("testing HeaderTable component", () => {
+  it("render", () => {
+    render(<HeaderTable text="Example header" children="" />);
 
-describe('testing HeaderTable component', () => {
+    const element = screen.getByText(/Example header/i);
 
-    it('render', () => {
-
-        render(<HeaderTable text='Example header'/>)
-
-        const element = screen.getByText(/Example header/i)
-
-        expect(element).toBeInTheDocument()
-
-    })
-
-})
+    expect(element).toBeInTheDocument();
+  });
+});
