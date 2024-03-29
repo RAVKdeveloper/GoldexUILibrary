@@ -25,3 +25,7 @@
 .btn.delete {
   @apply bg-critical-bg text-text-white;
 }
+
+.btn.dis {
+  @apply opacity-50 pointer-events-none;
+}
