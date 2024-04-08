@@ -3,7 +3,7 @@
 }
 
 .root {
-  @apply border-spacing-0 border-separate  border rounded-t-2xl border-transparent overflow-hidden;
+  @apply w-full border-spacing-0 border-separate  border rounded-t-2xl border-transparent overflow-hidden;
 }
 
 .wrapper::-webkit-scrollbar {
