@@ -1,5 +1,5 @@
 .root {
-  @apply w-67 h-5 flex items-center justify-between select-none;
+  @apply w-full h-5 flex items-center justify-between select-none;
 }
 
 .iconsRow {
