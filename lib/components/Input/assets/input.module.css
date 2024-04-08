@@ -1,9 +1,9 @@
 .wrapper {
-  @apply relative w-full;
+  @apply relative w-full inline;
 }
 
 .root {
-  @apply outline-none rounded-xl border-2 border-transperant-white text-sm 
+  @apply w-full outline-none rounded-xl border-2 border-transperant-white text-sm 
    placeholder:text-text-white placeholder:opacity-40
    bg-primary-btn-text text-text-white
    hover:border-bg-accent transition
@@ -43,6 +43,10 @@
 
 .icon.sm {
   @apply absolute top-2.5 right-3;
+}
+
+.icon.full {
+  @apply absolute top-3.5 right-3;
 }
 
 .wrapper.dis {
