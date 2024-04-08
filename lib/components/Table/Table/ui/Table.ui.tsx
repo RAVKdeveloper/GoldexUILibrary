@@ -1,6 +1,10 @@
 import { FC } from "react";
 
-import { useTable } from "react-table";
+import {
+  useReactTable,
+  flexRender,
+  getCoreRowModel,
+} from "@tanstack/react-table";
 
 import { HeaderTable } from "../../Header/ui/Header.ui";
 
@@ -9,38 +13,44 @@ import type { TableType } from "../assets/Table.type";
 import s from "../assets/style.module.css";
 
 export const Table: FC<TableType> = ({ data, columns }) => {
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+  const { getHeaderGroups, getRowModel } =
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
-    useTable({ columns, data });
+    useReactTable({ columns, data, getCoreRowModel: getCoreRowModel() });
 
   return (
     <div className={s.wrapper}>
-      <table {...getTableProps()} className={s.root} data-testid="table">
+      <table className={s.root} data-testid="table">
         <thead>
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column) => (
-                <HeaderTable {...column.getHeaderProps()}>
-                  {column.render("Header")}
+          {getHeaderGroups().map((header) => (
+            <tr key={header.id}>
+              {header.headers.map((column) => (
+                <HeaderTable key={column.id}>
+                  {flexRender(
+                    column.column.columnDef.header,
+                    column.getContext()
+                  )}
                 </HeaderTable>
               ))}
             </tr>
           ))}
         </thead>
-        <tbody {...getTableBodyProps()}>
-          {rows.map((row) => {
-            prepareRow(row);
-            return (
-              <tr {...row.getRowProps()}>
-                {row.cells.map((cell) => (
-                  <td {...cell.getCellProps()} className={s.cell}>
-                    {cell.render("Cell")}
-                  </td>
-                ))}
-              </tr>
-            );
-          })}
+        <tbody>
+          {getRowModel().rows.map((row) => (
+            <tr key={row.id}>
+              {row.getVisibleCells().map((cell) => (
+                <td key={cell.id} className={s.cell}>
+                  {flexRender(
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-expect-error
+                    // Вместо типа ReactNode возвращает unknown
+                    cell.getContext().cell.getValue(),
+                    cell.getContext()
+                  )}
+                </td>
+              ))}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
