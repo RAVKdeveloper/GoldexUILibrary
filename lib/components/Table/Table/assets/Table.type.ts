@@ -1,6 +1,6 @@
 type Columns = {
-  Header: string;
-  accessor: string;
+  header: string;
+  accessorKey: string;
 };
 
 export interface TableType {

@@ -8,10 +8,10 @@ Goldex design system
 npm i goldex-ui-library
 </pre>
 
-# Update 1.0.9:
+# Update 1.1.0:
 
-- Add Table component
-- Update modal actions component
+- Update Table component
+- Update select component
 
 # Basic Usage
 
@@ -37,6 +37,6 @@ export function Component() {
 <a href='https://www.npmjs.com/package/goldex-ui-library?activeTab=readme' target='_blank'>NPM</a>
 </p>
 <p>
-<a href='https://65fc19e68da4a5d17254f986-wvdkzyitgi.chromatic.com/' target='_blank'>View components</a>
+<a href='https://65fc19e68da4a5d17254f986-oytnjybsci.chromatic.com/' target='_blank'>View components</a>
 </p>
 </div>

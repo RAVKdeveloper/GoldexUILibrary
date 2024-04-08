@@ -12,7 +12,7 @@ const meta: Meta<typeof Table> = {
   argTypes: {
     data: {
       description:
-        "The cell data, the key in the objects, must be bound (have the same name) to the header accessor. Docs https://react-table-v7-docs.netlify.app/docs/installation",
+        "The cell data, the key in the objects, must be bound (have the same name) to the header accessorKey. Docs https://react-table-v7-docs.netlify.app/docs/installation",
     },
     columns: {
       description:
@@ -21,13 +21,13 @@ const meta: Meta<typeof Table> = {
         <pre> 
         [ 
             { 
-                Header: 'Header name', 
-                accessor: 'Key header' 
+                header: 'header name', 
+                accessorKey: 'Key header' 
             } 
         ]
         </pre>
         ` +
-        "Cells are bound by the value of the key (accessor). ",
+        "Cells are bound by the value of the key (accessorKey). ",
     },
   },
   decorators: [
@@ -90,32 +90,32 @@ export const InvoicesTable: Story = {
     ],
     columns: [
       {
-        Header: "ID",
-        accessor: "col1",
+        header: "ID",
+        accessorKey: "col1",
       },
       {
-        Header: "Банк клиента",
-        accessor: "col2",
+        header: "Банк клиента",
+        accessorKey: "col2",
       },
       {
-        Header: "ID клиента",
-        accessor: "col3",
+        header: "ID клиента",
+        accessorKey: "col3",
       },
       {
-        Header: "Метод",
-        accessor: "col4",
+        header: "Метод",
+        accessorKey: "col4",
       },
       {
-        Header: "Дата и время",
-        accessor: "col5",
+        header: "Дата и время",
+        accessorKey: "col5",
       },
       {
-        Header: "Статус",
-        accessor: "status",
+        header: "Статус",
+        accessorKey: "status",
       },
       {
-        Header: "Сумма",
-        accessor: "sum",
+        header: "Сумма",
+        accessorKey: "sum",
       },
     ],
   },
