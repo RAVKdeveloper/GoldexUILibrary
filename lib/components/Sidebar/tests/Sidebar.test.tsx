@@ -51,6 +51,9 @@ describe("testing Sidebar component", () => {
           changeLanguage={() => confirm("d")}
           cbAvatar={() => confirm("open")}
           activeLng={"en"}
+          cbLogOut={() => {}}
+          cbSupport={() => {}}
+          cbTheme={() => {}}
         />
       </MemoryRouter>
     );
