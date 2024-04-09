@@ -28,8 +28,22 @@ export const Sidebar: FC<SidebarType> = ({
   isOpenModal,
   changeLanguage,
   activeLng,
+  cbLogOut,
+  cbSupport,
+  cbTheme,
 }) => {
   const { pathname } = useLocation();
+
+  const objModalTranslations = {
+    lng_ru: "Язык",
+    lng_en: "Language",
+    sup_ru: "Поддержка",
+    sup_en: "Support",
+    theme_ru: "Тема",
+    theme_en: "Theme",
+    log_ru: "Выйти",
+    log_en: "Log out",
+  };
 
   return (
     <aside data-testid="sidebar" className={s.root}>
@@ -153,14 +167,22 @@ export const Sidebar: FC<SidebarType> = ({
           isOpenModal={isOpenModal}
           modal={
             <ProfileModal
-              cbPropSupport={() => confirm("support")}
-              cbPropTheme={() => confirm("theme")}
-              cbPropLogout={() => confirm("logour")}
+              cbPropSupport={cbSupport}
+              cbPropTheme={cbTheme}
+              cbPropLogout={cbLogOut}
               isDarkMode={true}
-              textLng="Language"
-              textSupport="Support"
-              textTheme="Theme"
-              textLogOut="Log out"
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-expect-error
+              textLng={objModalTranslations[`lng_${activeLng}`]}
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-expect-error
+              textSupport={objModalTranslations[`sup_${activeLng}`]}
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-expect-error
+              textTheme={objModalTranslations[`theme_${activeLng}`]}
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-expect-error
+              textLogOut={objModalTranslations[`log_${activeLng}`]}
               activeLng={activeLng}
               changeLng={changeLanguage}
             />
