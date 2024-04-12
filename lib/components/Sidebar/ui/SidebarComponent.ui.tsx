@@ -61,6 +61,8 @@ export const Sidebar: FC<SidebarType> = ({
             currency="USDT"
           />
         </div>
+      </div>
+      <div className={s.flexBox}>
         <ul className={s.list}>
           {SidebarsNavItems.filter(({ lng }) => lng === activeLng).map(
             ({ id, name, Icon, type, indentity, auto, childs }) => (
@@ -87,8 +89,9 @@ export const Sidebar: FC<SidebarType> = ({
                       )
                     }
                     listNodes={
-                      childs && childs.length > 0
-                        ? childs.map(({ name, indentity, isEnd, id }) => (
+                      childs && childs.length > 0 ? (
+                        <div className={s.childList}>
+                          {childs.map(({ name, indentity, isEnd, id }) => (
                             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                             // @ts-expect-error
                             <Link key={id} to={links[indentity]}>
@@ -101,8 +104,11 @@ export const Sidebar: FC<SidebarType> = ({
                                 isActive={pathname === links[indentity]}
                               />
                             </Link>
-                          ))
-                        : ""
+                          ))}
+                        </div>
+                      ) : (
+                        ""
+                      )
                     }
                   />
                 ) : (
@@ -157,38 +163,38 @@ export const Sidebar: FC<SidebarType> = ({
             )
           )}
         </ul>
-      </div>
-      <div className={s.bottom}>
-        <ProfileCard
-          avatarNickName={user.name}
-          avatarRole={user.role}
-          avatarUrl={user.url}
-          cbOptions={() => cbAvatar?.()}
-          isOpenModal={isOpenModal}
-          modal={
-            <ProfileModal
-              cbPropSupport={cbSupport}
-              cbPropTheme={cbTheme}
-              cbPropLogout={cbLogOut}
-              isDarkMode={true}
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-expect-error
-              textLng={objModalTranslations[`lng_${activeLng}`]}
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-expect-error
-              textSupport={objModalTranslations[`sup_${activeLng}`]}
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-expect-error
-              textTheme={objModalTranslations[`theme_${activeLng}`]}
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-expect-error
-              textLogOut={objModalTranslations[`log_${activeLng}`]}
-              activeLng={activeLng}
-              changeLng={changeLanguage}
-            />
-          }
-        />
-        <div className={s.remainingCard}>{timeRemaining}</div>
+        <div className={s.bottom}>
+          <ProfileCard
+            avatarNickName={user.name}
+            avatarRole={user.role}
+            avatarUrl={user.url}
+            cbOptions={() => cbAvatar?.()}
+            isOpenModal={isOpenModal}
+            modal={
+              <ProfileModal
+                cbPropSupport={cbSupport}
+                cbPropTheme={cbTheme}
+                cbPropLogout={cbLogOut}
+                isDarkMode={true}
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
+                textLng={objModalTranslations[`lng_${activeLng}`]}
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
+                textSupport={objModalTranslations[`sup_${activeLng}`]}
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
+                textTheme={objModalTranslations[`theme_${activeLng}`]}
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
+                textLogOut={objModalTranslations[`log_${activeLng}`]}
+                activeLng={activeLng}
+                changeLng={changeLanguage}
+              />
+            }
+          />
+          <div className={s.remainingCard}>{timeRemaining}</div>
+        </div>
       </div>
     </aside>
   );
