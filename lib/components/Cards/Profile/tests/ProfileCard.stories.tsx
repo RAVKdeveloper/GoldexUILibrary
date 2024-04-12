@@ -8,7 +8,7 @@ const meta: Meta<typeof ProfileCard> = {
   tags: ["autodocs"],
   decorators: [
     (Story) => (
-      <div style={{ padding: 20, background: "#1F1F24" }}>
+      <div style={{ padding: 20, background: "#1F1F24", maxWidth: 225 }}>
         <Story />
       </div>
     ),
