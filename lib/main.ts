@@ -57,3 +57,4 @@ export { Modal } from "./components/Modal/ui/Modal.ui";
 export { Table } from "./components/Table/Table/ui/Table.ui";
 export { TableWithPagination } from "./components/Table/TableWithPagination/ui/TableWithPagination.ui";
 export { RoleDropdown } from "./Entities/RoleDropdown/ui/RoleDropdown.ui";
+export { Alert } from "./Entities/Alert/ui/Alert.ui";

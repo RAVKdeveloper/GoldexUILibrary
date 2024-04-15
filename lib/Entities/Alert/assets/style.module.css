@@ -1,0 +1,36 @@
+.root {
+  @apply fixed flex items-center gap-2 rounded-xl bottom-10  left-7 py-2 px-3 z-50
+  opacity-0 pointer-events-none transition;
+}
+
+.root.open {
+  @apply opacity-100 pointer-events-auto transition;
+}
+
+.root.standart {
+  @apply w-96;
+}
+
+.root.full {
+  @apply w-full;
+}
+
+.root.success {
+  @apply bg-[#b7eb8f] text-sm;
+}
+
+.root.info {
+  @apply bg-[#e6f4ff] text-sm border border-[#69b1ff];
+}
+
+.root.error {
+  @apply bg-[#ffccc7] text-sm border border-[#ffa39e];
+}
+
+.root.warning {
+  @apply bg-[#ffe58f] text-sm border border-[#ffd666];
+}
+
+.text {
+  @apply text-ellipsis text-nowrap whitespace-nowrap text-inherit;
+}
