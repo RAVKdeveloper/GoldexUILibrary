@@ -36,6 +36,6 @@ export function Component() {
 <a href='https://www.npmjs.com/package/goldex-ui-library?activeTab=readme' target='_blank'>NPM</a>
 </p>
 <p>
-<a href='https://65fc19e68da4a5d17254f986-armhnvjlou.chromatic.com/' target='_blank'>View components</a>
+<a href='https://65fc19e68da4a5d17254f986-jjavaptoot.chromatic.com/' target='_blank'>View components</a>
 </p>
 </div>
