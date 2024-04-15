@@ -1,16 +1,13 @@
-import { FC } from 'react'
+import { FC } from "react";
 
-import { InputDropdown } from './ui/Input.ui'
+import { InputDropdown } from "./ui/Input.ui";
 
-import type { DropdownType } from './assets/Dropdown.type'
-
+import type { DropdownType } from "./assets/Dropdown.type";
 
 export const Dropdown: FC<DropdownType> = (props) => {
-
-    return (
-          
-        <fieldset>
-          <InputDropdown {...props} />
-        </fieldset>
-    )
-}
+  return (
+    <fieldset className="w-full">
+      <InputDropdown {...props} />
+    </fieldset>
+  );
+};

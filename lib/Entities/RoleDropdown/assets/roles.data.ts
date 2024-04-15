@@ -1,0 +1,8 @@
+export const Roles = [
+  "TRAIDER_ADMIN",
+  "TRAIDER_MANAGER",
+  "TRAIDER_OWNER",
+  "PROJECT_OWNER",
+  "PROJECT_ADMIN",
+  "PROJECT_MANAGER",
+];

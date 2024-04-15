@@ -1,0 +1,28 @@
+.root {
+  @apply absolute z-10 w-full max-h-64 rounded-xl p-1.5 bg-bg-primary border border-white border-opacity-10
+   overflow-hidden opacity-0 pointer-events-none transition;
+}
+
+.root.open {
+  @apply opacity-100 pointer-events-auto transition;
+}
+
+.wrapper {
+  @apply overflow-y-auto flex flex-col gap-1 max-h-64 pb-4;
+}
+
+.wrapper::-webkit-scrollbar {
+  @apply w-1.5 py-0.5 px-0.5;
+}
+
+.wrapper::-webkit-scrollbar-corner {
+  @apply hidden;
+}
+
+.wrapper::-webkit-scrollbar-button {
+  @apply hidden;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  @apply w-1.5 bg-text-white bg-opacity-5 rounded-lg bg-clip-border;
+}
