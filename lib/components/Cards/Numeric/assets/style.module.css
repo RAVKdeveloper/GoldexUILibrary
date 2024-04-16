@@ -1,5 +1,5 @@
 .root {
-  @apply py-4 px-5 bg-transperant-white rounded-xl inline-flex flex-col gap-5 min-w-90;
+  @apply py-4 px-5 bg-transperant-white rounded-xl inline-flex flex-col gap-5 min-w-64 w-full;
 }
 
 .content {
@@ -19,5 +19,5 @@
 }
 
 .chart {
-  @apply lg:block hidden h-20;
+  @apply lg:block hidden min-h-20;
 }
