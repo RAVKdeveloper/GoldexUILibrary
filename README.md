@@ -8,9 +8,10 @@ Goldex design system
 npm i goldex-ui-library
 </pre>
 
-# Update 1.1.5:
+# Update 1.1.8:
 
-- Add table with client site pagination
+- Update profile card component
+- Optimize icons from ui-library
 
 # Basic Usage
 

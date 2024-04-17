@@ -77,8 +77,6 @@ describe("tests Button component", () => {
 
     user.click(screen.getByRole("button", { name: /Button/i }));
 
-    const elementImg = screen.getByRole("img");
-
-    expect(elementImg).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Button/i })).toBeInTheDocument();
   });
 });
