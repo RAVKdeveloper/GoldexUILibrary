@@ -1,6 +1,6 @@
 interface UserSidebarType {
   id: number;
-  url: string;
+  url?: string;
   avatar: string;
   name: string;
   role: string;

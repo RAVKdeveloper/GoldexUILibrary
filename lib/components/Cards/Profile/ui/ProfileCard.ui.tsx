@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { MenuDotsIcon } from "goldex-icon-library";
 
+import { TextAvatar } from "../../../Avatars";
+
 import type { ProfileCardType } from "../assets/ProfileCard.type";
 
 import s from "../assets/style.module.css";
@@ -16,7 +18,11 @@ export const ProfileCard: FC<ProfileCardType> = ({
   return (
     <article className={s.root}>
       <div className={s.content}>
-        <img src={avatarUrl} alt={avatarNickName} className={s.avatar} />
+        {avatarUrl ? (
+          <img src={avatarUrl} alt={avatarNickName} className={s.avatar} />
+        ) : (
+          <TextAvatar bgColor="pink" auto name={avatarNickName} sizeType="es" />
+        )}
         <div className={s.column}>
           <span className={s.nick}>{avatarNickName}</span>
           <span className={s.role}>{avatarRole}</span>

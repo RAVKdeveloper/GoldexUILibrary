@@ -1,7 +1,7 @@
 import { ReactElement, ReactNode } from "react";
 
 export interface ProfileCardType {
-  avatarUrl: string;
+  avatarUrl?: string;
   avatarNickName: string;
   avatarRole: string;
   cbOptions: () => void;
