@@ -1,10 +1,10 @@
-import { FC } from "react";
 import {
   CheckIcon,
   ErrorIcon,
   FeaturedIcon,
   InfoIcon,
 } from "goldex-icon-library";
+import { FC } from "react";
 
 import type { AlertType } from "../assets/Alert.type";
 
@@ -15,6 +15,7 @@ export const Alert: FC<AlertType> = ({
   variant,
   sizeType = "standart",
   isOpen,
+  ...props
 }) => {
   const icons = {
     success: <CheckIcon width={14} height={14} color="green" />,
@@ -28,6 +29,7 @@ export const Alert: FC<AlertType> = ({
   return (
     <article
       className={`${s.root} ${s[variant]} ${s[sizeType]} ${isOpen && s.open}`}
+      {...props}
     >
       {icons[variant]}
       <span className={s.text}>{children}</span>

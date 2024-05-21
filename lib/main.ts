@@ -1,5 +1,6 @@
 export { Alert } from "./Entities/Alert/ui/Alert.ui";
 export { RoleDropdown } from "./Entities/RoleDropdown/ui/RoleDropdown.ui";
+export * from "./apis/notifApi/index";
 export { ImageAvatar, TextAvatar, UploadAvatar } from "./components/Avatars";
 export { Button } from "./components/Button/ui/Button";
 export {
