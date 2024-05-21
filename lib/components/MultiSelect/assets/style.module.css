@@ -1,0 +1,49 @@
+.root {
+  @apply w-full relative min-h-9 pl-1 pr-8 py-0.25 bg-bg-primary rounded-xl 
+  border border-white border-opacity-10 cursor-pointer hover:border-bg-accent transition;
+}
+
+.placeholder {
+  @apply w-full flex items-center gap-2 flex-wrap;
+}
+
+.placeholder span {
+  @apply pt-1.5 pl-1 text-text-white text-sm opacity-45;
+}
+
+.mainIcon {
+  @apply absolute top-2.5 right-3;
+}
+
+.dropdown {
+  @apply absolute left-0 top-full z-10 w-full rounded-xl p-1.5 bg-bg-primary border border-white border-opacity-10
+  overflow-hidden opacity-0 pointer-events-none transition;
+}
+
+.dropdown.open {
+  @apply opacity-100 pointer-events-auto transition;
+}
+
+.list {
+  @apply overflow-y-auto flex flex-col gap-1 max-h-64 pb-4;
+}
+
+.list::-webkit-scrollbar {
+  @apply w-1.5 py-0.5 px-0.5;
+}
+
+.list::-webkit-scrollbar-corner {
+  @apply hidden;
+}
+
+.list::-webkit-scrollbar-button {
+  @apply hidden;
+}
+
+.list::-webkit-scrollbar-thumb {
+  @apply w-1.5 bg-text-white bg-opacity-5 rounded-lg bg-clip-border;
+}
+
+.card {
+  @apply text-text-white pl-2 pr-1 py-0.5 flex items-center gap-1 my-0.5 bg-transparent rounded-md border border-bg-accent;
+}
