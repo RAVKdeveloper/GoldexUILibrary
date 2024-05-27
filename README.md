@@ -8,10 +8,11 @@ Goldex design system
 npm i goldex-ui-library
 </pre>
 
-# Update 1.1.8:
+# Update 1.2.0:
 
-- Update profile card component
-- Optimize icons from ui-library
+- Add datepicker component
+- Add multiselect component
+- Add Notification api
 
 # Basic Usage
 

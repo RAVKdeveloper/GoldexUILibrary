@@ -44,6 +44,6 @@ export interface SidebarType {
   changeLanguage: (lng: string) => void;
   activeLng: string;
   cbLogOut: () => void;
-  cbSupport: () => void;
-  cbTheme: () => void;
+  cbSupport?: () => void;
+  cbTheme?: () => void;
 }

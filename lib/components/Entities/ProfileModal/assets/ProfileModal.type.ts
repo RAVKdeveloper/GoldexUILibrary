@@ -1,7 +1,7 @@
 export interface ProfileModalType {
   cbPropLanguage?: () => void;
-  cbPropSupport: () => void;
-  cbPropTheme: () => void;
+  cbPropSupport?: () => void;
+  cbPropTheme?: () => void;
   cbPropLogout: () => void;
   isDarkMode: boolean;
   textLng: string;

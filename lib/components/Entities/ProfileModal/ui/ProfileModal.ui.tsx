@@ -1,11 +1,11 @@
-import { FC, useState } from "react";
 import {
+  ChevronRightIcon,
   LanguageIcon,
-  ThemeIcon,
   LogOutIcon,
   SupportIcon,
-  ChevronRightIcon,
+  ThemeIcon,
 } from "goldex-icon-library";
+import { FC, useState } from "react";
 
 import { Dropdown, LanguageModal } from "../../../../main";
 
@@ -41,18 +41,22 @@ export const ProfileModal: FC<ProfileModalType> = ({
         onClick={openLngModal}
         iconEnd={<ChevronRightIcon opacity={0.4} width={16} height={16} />}
       />
-      <Dropdown
-        placeholder={textSupport}
-        icon={<SupportIcon opacity={1} width={16} height={16} />}
-        onClick={() => cbPropSupport()}
-      />
-      <Dropdown
-        placeholder={textTheme}
-        icon={<ThemeIcon opacity={1} width={16} height={16} />}
-        isToggle={true}
-        cbToggle={() => cbPropTheme()}
-        isActiveToggle={isDarkMode}
-      />
+      {cbPropSupport && (
+        <Dropdown
+          placeholder={textSupport}
+          icon={<SupportIcon opacity={1} width={16} height={16} />}
+          onClick={() => cbPropSupport()}
+        />
+      )}
+      {cbPropTheme && (
+        <Dropdown
+          placeholder={textTheme}
+          icon={<ThemeIcon opacity={1} width={16} height={16} />}
+          isToggle={true}
+          cbToggle={() => cbPropTheme()}
+          isActiveToggle={isDarkMode}
+        />
+      )}
       <Dropdown
         placeholder={textLogOut}
         icon={<LogOutIcon opacity={1} width={16} height={16} />}

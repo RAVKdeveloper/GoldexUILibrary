@@ -10,6 +10,7 @@ export {
   ProjectCard,
   TransactionCard,
 } from "./components/Cards";
+export { DatePicker } from "./components/DatePicker/DatePicker.ui";
 export { Dropdown } from "./components/Dropdown/Dropdown.ui";
 export { LanguageModal, ProfileModal } from "./components/Entities/index";
 export { TextField } from "./components/Input/TextField.ui";
