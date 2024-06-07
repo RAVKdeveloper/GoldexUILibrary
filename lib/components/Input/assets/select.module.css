@@ -28,3 +28,40 @@
 .root.dis {
   @apply opacity-60 pointer-events-none;
 }
+
+.selectBox {
+  @apply relative;
+}
+
+.overflow {
+  @apply fixed w-full h-full left-0 top-0 right-0 z-30;
+}
+
+.dropdown {
+  @apply absolute left-0 top-full z-40 w-full rounded-xl p-1.5 bg-bg-primary border border-white border-opacity-10
+  overflow-hidden opacity-0 pointer-events-none transition;
+}
+
+.dropdown.open {
+  @apply opacity-100 pointer-events-auto transition;
+}
+
+.list {
+  @apply overflow-y-auto flex flex-col gap-1 max-h-64 pb-1;
+}
+
+.list::-webkit-scrollbar {
+  @apply w-1.5 py-0.5 px-0.5;
+}
+
+.list::-webkit-scrollbar-corner {
+  @apply hidden;
+}
+
+.list::-webkit-scrollbar-button {
+  @apply hidden;
+}
+
+.list::-webkit-scrollbar-thumb {
+  @apply w-1.5 bg-text-white bg-opacity-5 rounded-lg bg-clip-border;
+}

@@ -17,6 +17,11 @@ export const TextField: FC<TextFieldType> = ({
   cbIcon,
   label,
   disabled = false,
+  options,
+  activeValue,
+  changeSelectValue,
+  isOpenOverflow,
+  btnText,
   ...props
 }) => {
   const objFields = {
@@ -39,6 +44,11 @@ export const TextField: FC<TextFieldType> = ({
         sizeType={sizeType}
         isError={isError}
         disabled={disabled}
+        options={options}
+        activeValue={activeValue}
+        changeSelectValue={changeSelectValue}
+        isOpenOverflow={isOpenOverflow}
+        btnText={btnText}
       />
     ),
   };
