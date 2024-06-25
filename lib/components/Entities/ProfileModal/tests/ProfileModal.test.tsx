@@ -21,6 +21,7 @@ describe("testing ProfileModal component", () => {
         textLogOut="Log out"
         activeLng="en"
         changeLng={(lng: string) => [lng]}
+        isOpenMainModal={true}
       />
     );
 

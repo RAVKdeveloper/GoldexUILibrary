@@ -1,5 +1,5 @@
-import { FC } from "react";
 import { MenuDotsIcon } from "goldex-icon-library";
+import { FC } from "react";
 
 import { TextAvatar } from "../../../Avatars";
 
@@ -35,6 +35,7 @@ export const ProfileCard: FC<ProfileCardType> = ({
       >
         <MenuDotsIcon opacity={0.4} width={20} height={20} />
       </div>
+      {isOpenModal && <div className={s.overflow} onClick={cbOptions} />}
       <div className={`${s.modal} ${modal && isOpenModal && s.open}`}>
         {modal}
       </div>

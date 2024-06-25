@@ -38,3 +38,7 @@
 .modal.open {
   @apply opacity-100 pointer-events-auto transition;
 }
+
+.overflow {
+  @apply fixed left-0 top-0 w-screen h-screen;
+}

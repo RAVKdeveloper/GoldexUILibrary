@@ -10,4 +10,5 @@ export interface ProfileModalType {
   textLogOut: string;
   activeLng: string;
   changeLng: (lng: string) => void;
+  readonly isOpenMainModal: boolean;
 }

@@ -5,7 +5,7 @@ import {
   SupportIcon,
   ThemeIcon,
 } from "goldex-icon-library";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
 import { Dropdown, LanguageModal } from "../../../../main";
 
@@ -25,6 +25,7 @@ export const ProfileModal: FC<ProfileModalType> = ({
   textTheme,
   activeLng,
   changeLng,
+  isOpenMainModal,
 }) => {
   const [isOpenLng, setIsOpenLng] = useState<boolean>(false);
 
@@ -32,6 +33,10 @@ export const ProfileModal: FC<ProfileModalType> = ({
     setIsOpenLng(!isOpenLng);
     cbPropLanguage?.();
   };
+
+  useEffect(() => {
+    if (!isOpenMainModal) setIsOpenLng(false);
+  }, [isOpenMainModal]);
 
   return (
     <article data-testid="modal" className={s.root}>

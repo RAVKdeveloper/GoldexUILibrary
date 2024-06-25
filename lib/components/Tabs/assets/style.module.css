@@ -1,15 +1,15 @@
 .root {
   @apply rounded-x text-text-white text-opacity-40 bg-bg-primary
   hover:text-opacity-100 transition cursor-pointer inline-flex
-  justify-center items-center select-none;
+  justify-center items-center select-none font-medium;
 }
 
 .root.lg {
-  @apply py-1.5 px-3 h-8 w-17 text-sm font-medium;
+  @apply py-1.5 px-3 text-sm;
 }
 
 .root.sm {
-  @apply py-1 px-2 h-7 w-14 text-xs font-medium;
+  @apply py-1 px-2 text-xs font-medium;
 }
 
 .root.active {

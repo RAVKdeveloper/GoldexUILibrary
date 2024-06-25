@@ -4,10 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 
 import { LogoIcon, RubleIcon, USDTIcon } from "goldex-icon-library";
 import {
+  Badge,
   BalanceCard,
   NavigationItem,
   ProfileCard,
-  Badge,
   ProfileModal,
 } from "../../../main";
 
@@ -190,6 +190,7 @@ export const Sidebar: FC<SidebarType> = ({
                 textLogOut={objModalTranslations[`log_${activeLng}`]}
                 activeLng={activeLng}
                 changeLng={changeLanguage}
+                isOpenMainModal={isOpenModal}
               />
             }
           />

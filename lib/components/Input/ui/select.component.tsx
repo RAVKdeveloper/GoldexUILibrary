@@ -47,7 +47,7 @@ export const SelectComponent: FC<Props> = ({
         <div className={s.overflow} onClick={openDropdown} />
       )}
       <div className={s.selectBox}>
-        {options && changeSelectValue && activeValue ? (
+        {options && changeSelectValue ? (
           <div
             onClick={openDropdown}
             className={`${s.root} ${s[sizeType]} ${isError && s.error} ${
