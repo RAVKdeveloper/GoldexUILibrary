@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes, ReactNode } from "react";
+import { FC, InputHTMLAttributes, ReactNode, forwardRef } from "react";
 
 import s from "../assets/input.module.css";
 
@@ -10,27 +10,36 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   disabled?: boolean;
 }
 
-export const MainInputComponent: FC<Props> = ({
-  variant = "lg",
-  isError = false,
-  icon,
-  cbIcon,
-  disabled = false,
-  ...props
-}) => {
-  return (
-    <div className={`${s.wrapper} ${disabled && s.dis}`}>
-      <input
-        className={`${s.root} ${s[variant]} ${isError && s.error} ${
-          icon && s.pad
-        }`}
-        {...props}
-      />
-      {icon && (
-        <div onClick={() => cbIcon?.()} className={`${s.icon} ${s[variant]}`}>
-          {icon}
-        </div>
-      )}
-    </div>
-  );
-};
+export const MainInputComponent: FC<Props> = forwardRef<
+  HTMLInputElement,
+  Props
+>(
+  (
+    {
+      variant = "lg",
+      isError = false,
+      icon,
+      cbIcon,
+      disabled = false,
+      ...props
+    },
+    ref
+  ) => {
+    return (
+      <div className={`${s.wrapper} ${disabled && s.dis}`}>
+        <input
+          className={`${s.root} ${s[variant]} ${isError && s.error} ${
+            icon && s.pad
+          }`}
+          {...props}
+          ref={ref}
+        />
+        {icon && (
+          <div onClick={() => cbIcon?.()} className={`${s.icon} ${s[variant]}`}>
+            {icon}
+          </div>
+        )}
+      </div>
+    );
+  }
+);

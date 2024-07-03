@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, forwardRef } from "react";
 
 import { DropdownSelect } from "./dropdown";
 import { PlaceholderComponent } from "./placeholder.component";
@@ -23,61 +23,66 @@ interface Props {
   readonly btnText?: string;
 }
 
-export const SelectComponent: FC<Props> = ({
-  icon,
-  placeholder,
-  callback,
-  sizeType = "lg",
-  isError = false,
-  disabled = false,
-  options,
-  activeValue,
-  changeSelectValue,
-  isOpenOverflow,
-  btnText,
-}) => {
-  const { isOpenDropdown, openDropdown } = useSelect();
+export const SelectComponent: FC<Props> = forwardRef<HTMLDivElement, Props>(
+  (
+    {
+      icon,
+      placeholder,
+      callback,
+      sizeType = "lg",
+      isError = false,
+      disabled = false,
+      options,
+      activeValue,
+      changeSelectValue,
+      isOpenOverflow,
+      btnText,
+    },
+    ref
+  ) => {
+    const { isOpenDropdown, openDropdown } = useSelect();
 
-  return (
-    <>
-      {isOpenOverflow && !options && (
-        <div className={s.overflow} onClick={() => callback?.()} />
-      )}
-      {isOpenDropdown && options && (
-        <div className={s.overflow} onClick={openDropdown} />
-      )}
-      <div className={s.selectBox}>
-        {options && changeSelectValue ? (
-          <div
-            onClick={openDropdown}
-            className={`${s.root} ${s[sizeType]} ${isError && s.error} ${
-              disabled && s.dis
-            }`}
-          >
-            <PlaceholderComponent icon={icon} placeholder={placeholder} />
-          </div>
-        ) : (
-          <div
-            onClick={() => callback?.()}
-            className={`${s.root} ${s[sizeType]} ${isError && s.error} ${
-              disabled && s.dis
-            }`}
-          >
-            <PlaceholderComponent icon={icon} placeholder={placeholder} />
-          </div>
+    return (
+      <>
+        {isOpenOverflow && !options && (
+          <div className={s.overflow} onClick={() => callback?.()} />
         )}
-        {options && changeSelectValue && (
-          <DropdownSelect
-            options={options}
-            value={activeValue ? activeValue.toString() : ""}
-            isOpen={isOpenDropdown}
-            changeSelectValue={changeSelectValue}
-            cbClose={openDropdown}
-            placeholder={placeholder ?? ""}
-            btnText={btnText ?? ""}
-          />
+        {isOpenDropdown && options && (
+          <div className={s.overflow} onClick={openDropdown} />
         )}
-      </div>
-    </>
-  );
-};
+        <div className={s.selectBox} ref={ref}>
+          {options && changeSelectValue ? (
+            <div
+              onClick={openDropdown}
+              className={`${s.root} ${s[sizeType]} ${isError && s.error} ${
+                disabled && s.dis
+              }`}
+            >
+              <PlaceholderComponent icon={icon} placeholder={placeholder} />
+            </div>
+          ) : (
+            <div
+              onClick={() => callback?.()}
+              className={`${s.root} ${s[sizeType]} ${isError && s.error} ${
+                disabled && s.dis
+              }`}
+            >
+              <PlaceholderComponent icon={icon} placeholder={placeholder} />
+            </div>
+          )}
+          {options && changeSelectValue && (
+            <DropdownSelect
+              options={options}
+              value={activeValue ? activeValue.toString() : ""}
+              isOpen={isOpenDropdown}
+              changeSelectValue={changeSelectValue}
+              cbClose={openDropdown}
+              placeholder={placeholder ?? ""}
+              btnText={btnText ?? ""}
+            />
+          )}
+        </div>
+      </>
+    );
+  }
+);
