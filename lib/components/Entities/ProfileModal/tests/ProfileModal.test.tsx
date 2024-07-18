@@ -1,20 +1,24 @@
-import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
-import { ProfileModal } from "../..";
+import { ProfileModal } from '../..';
 
-describe("testing ProfileModal component", () => {
-  it("render", () => {
+describe('testing ProfileModal component', () => {
+  it('render', () => {
     const user = userEvent.setup();
 
     render(
       <ProfileModal
-        cbPropLanguage={() => confirm("lang")}
-        cbPropSupport={() => confirm("support")}
-        cbPropTheme={() => confirm("theme")}
-        cbPropLogout={() => confirm("logour")}
+        cbPropLanguage={() => confirm('lang')}
+        cbPropSupport={() => confirm('support')}
+        cbPropTheme={() => confirm('theme')}
+        cbPropLogout={() => confirm('logour')}
+        cbEditProfile={() => confirm('logour')}
+        cbMyProfile={() => confirm('logour')}
         isDarkMode={true}
+        textMyProfile="MyProfile"
+        textEditProfile="EditProfile"
         textLng="Language"
         textSupport="Support"
         textTheme="Theme"
@@ -25,7 +29,7 @@ describe("testing ProfileModal component", () => {
       />
     );
 
-    const modal = screen.getByTestId("modal");
+    const modal = screen.getByTestId('modal');
     const lngProp = screen.getByText(/Language/i);
     const supportProp = screen.getByText(/Support/i);
     const themeProp = screen.getByText(/Theme/i);

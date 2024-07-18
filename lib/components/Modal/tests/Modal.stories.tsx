@@ -1,24 +1,24 @@
-import { Modal } from "../ui/Modal.ui";
-import { ModalActions, ModalHeader } from "../../Modals";
+import { Modal } from '../ui/Modal.ui';
+import { ModalActions, ModalHeader } from '../../Modals';
 
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Modal> = {
-  title: "Design System/Atoms/Modal/Popup",
+  title: 'Design System/Atoms/Modal/Popup',
   component: Modal,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
     isOpen: {
       defaultValue: false,
-      description: "Is open modal?",
+      description: 'Is open modal?',
     },
     children: {
-      description: "Children components",
+      description: 'Children components',
     },
   },
   decorators: [
     (Story) => (
-      <div style={{ background: "#1F1F24", height: "100vh" }}>
+      <div style={{ background: '#1F1F24', height: '100vh' }}>
         <Story />
       </div>
     ),
@@ -35,7 +35,7 @@ export const Defult: Story = {
         <ModalHeader
           title="Modal"
           paragraph="This Modal"
-          cbClose={() => confirm("close")}
+          cbClose={() => confirm('close')}
         />
         <ModalActions
           btnTextAction="action"
