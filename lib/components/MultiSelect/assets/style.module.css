@@ -25,7 +25,7 @@
 }
 
 .list {
-  @apply overflow-y-auto flex flex-col gap-1 max-h-64 pb-4;
+  @apply overflow-y-auto flex flex-col gap-1 max-h-64 pb-0.5;
 }
 
 .list::-webkit-scrollbar {

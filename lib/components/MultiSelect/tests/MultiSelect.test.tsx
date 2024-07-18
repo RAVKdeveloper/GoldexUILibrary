@@ -8,7 +8,13 @@ describe("testing MultiSelect component", () => {
   const user = userEvent.setup();
 
   it("render empty options", () => {
-    render(<MultiSelect options={[]} placeholder="Placeholder" />);
+    render(
+      <MultiSelect
+        options={[]}
+        onChangeValue={() => {}}
+        placeholder="Placeholder"
+      />
+    );
 
     const rootComponent = screen.getByTestId("multiSelect");
 
@@ -24,6 +30,7 @@ describe("testing MultiSelect component", () => {
             value: "Test",
           },
         ]}
+        onChangeValue={() => {}}
         placeholder="Placeholder"
       />
     );
