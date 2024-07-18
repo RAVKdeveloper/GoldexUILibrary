@@ -1,24 +1,30 @@
 import {
   ChevronRightIcon,
+  EditIcon,
   LanguageIcon,
   LogOutIcon,
   SupportIcon,
   ThemeIcon,
-} from "goldex-icon-library";
-import { FC, useEffect, useState } from "react";
+  UserInvoiceIcon,
+} from 'goldex-icon-library';
+import { FC, useEffect, useState } from 'react';
 
-import { Dropdown, LanguageModal } from "../../../../main";
+import { Dropdown, LanguageModal } from '../../../../main';
 
-import type { ProfileModalType } from "../assets/ProfileModal.type";
+import type { ProfileModalType } from '../assets/ProfileModal.type';
 
-import s from "../assets/style.module.css";
+import s from '../assets/style.module.css';
 
 export const ProfileModal: FC<ProfileModalType> = ({
   cbPropLogout,
   cbPropLanguage,
   cbPropSupport,
   cbPropTheme,
+  cbMyProfile,
+  cbEditProfile,
   isDarkMode,
+  textMyProfile,
+  textEditProfile,
   textLng,
   textLogOut,
   textSupport,
@@ -62,6 +68,16 @@ export const ProfileModal: FC<ProfileModalType> = ({
           isActiveToggle={isDarkMode}
         />
       )}
+      <Dropdown
+        placeholder={textMyProfile}
+        icon={<UserInvoiceIcon width={16} height={16} />}
+        onClick={() => cbMyProfile()}
+      />
+      <Dropdown
+        placeholder={textEditProfile}
+        icon={<EditIcon width={16} height={16} />}
+        onClick={() => cbEditProfile()}
+      />
       <Dropdown
         placeholder={textLogOut}
         icon={<LogOutIcon opacity={1} width={16} height={16} />}
