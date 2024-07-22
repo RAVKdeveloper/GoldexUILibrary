@@ -1,21 +1,21 @@
-import { FC } from "react";
+import { FC } from 'react';
 
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from 'react-router-dom';
 
-import { LogoIcon, RubleIcon, USDTIcon } from "goldex-icon-library";
+import { LogoIcon, RubleIcon, USDTIcon } from 'goldex-icon-library';
 import {
   Badge,
   BalanceCard,
   NavigationItem,
   ProfileCard,
   ProfileModal,
-} from "../../../main";
+} from '../../../main';
 
-import type { SidebarType } from "../assets/Sidebar.type";
+import type { SidebarType } from '../assets/Sidebar.type';
 
-import { SidebarsNavItems } from "../assets/db.mock";
+import { SidebarsNavItems } from '../assets/db.mock';
 
-import s from "../assets/sidebar.module.css";
+import s from '../assets/sidebar.module.css';
 
 export const Sidebar: FC<SidebarType> = ({
   balanceUSDT,
@@ -28,6 +28,10 @@ export const Sidebar: FC<SidebarType> = ({
   isOpenModal,
   changeLanguage,
   activeLng,
+  cbMyProfile,
+  cbEditProfile,
+  textMyProfile,
+  textEditProfile,
   cbLogOut,
   cbSupport,
   cbTheme,
@@ -35,14 +39,14 @@ export const Sidebar: FC<SidebarType> = ({
   const { pathname } = useLocation();
 
   const objModalTranslations = {
-    lng_ru: "Язык",
-    lng_en: "Language",
-    sup_ru: "Поддержка",
-    sup_en: "Support",
-    theme_ru: "Тема",
-    theme_en: "Theme",
-    log_ru: "Выйти",
-    log_en: "Log out",
+    lng_ru: 'Язык',
+    lng_en: 'Language',
+    sup_ru: 'Поддержка',
+    sup_en: 'Support',
+    theme_ru: 'Тема',
+    theme_en: 'Theme',
+    log_ru: 'Выйти',
+    log_en: 'Log out',
   };
 
   return (
@@ -67,7 +71,7 @@ export const Sidebar: FC<SidebarType> = ({
           {SidebarsNavItems.filter(({ lng }) => lng === activeLng).map(
             ({ id, name, Icon, type, indentity, auto, childs }) => (
               <div key={id}>
-                {type === "list" ? (
+                {type === 'list' ? (
                   <NavigationItem
                     key={id}
                     auto={auto}
@@ -85,7 +89,7 @@ export const Sidebar: FC<SidebarType> = ({
                         // @ts-expect-error
                         <Badge text={notifications[indentity]} />
                       ) : (
-                        ""
+                        ''
                       )
                     }
                     listNodes={
@@ -107,7 +111,7 @@ export const Sidebar: FC<SidebarType> = ({
                           ))}
                         </div>
                       ) : (
-                        ""
+                        ''
                       )
                     }
                   />
@@ -117,7 +121,7 @@ export const Sidebar: FC<SidebarType> = ({
                     key={id}
                     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                     // @ts-expect-error
-                    to={!auto ? links[indentity] : "#"}
+                    to={!auto ? links[indentity] : '#'}
                   >
                     <NavigationItem
                       auto={auto}
@@ -135,7 +139,7 @@ export const Sidebar: FC<SidebarType> = ({
                           // @ts-expect-error
                           <Badge text={notifications[indentity]} />
                         ) : (
-                          ""
+                          ''
                         )
                       }
                       listNodes={
@@ -154,7 +158,7 @@ export const Sidebar: FC<SidebarType> = ({
                                 />
                               </Link>
                             ))
-                          : ""
+                          : ''
                       }
                     />
                   </Link>
@@ -175,6 +179,10 @@ export const Sidebar: FC<SidebarType> = ({
                 cbPropSupport={cbSupport}
                 cbPropTheme={cbTheme}
                 cbPropLogout={cbLogOut}
+                cbMyProfile={cbMyProfile}
+                cbEditProfile={cbEditProfile}
+                textMyProfile={textMyProfile}
+                textEditProfile={textEditProfile}
                 isDarkMode={true}
                 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-expect-error
