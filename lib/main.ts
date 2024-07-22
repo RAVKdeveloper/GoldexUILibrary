@@ -20,6 +20,7 @@ export * from "./components/MultiSelect";
 export { NavigationItem } from "./components/NavigationItems/ui/NavigationItem.ui";
 export { Overflow } from "./components/Overflow/ui/Overflow.ui";
 export { Pagination } from "./components/Pagination/ui/Pagination.ui";
+export { SelectInput } from "./components/SelectInput/SelectInput.ui";
 export { Sidebar, SidebarMobile } from "./components/Sidebar/Sidebar.ui";
 export { Checkbox, Percent, Radio, Toggle } from "./components/SmallComponents";
 export { Spinner } from "./components/Spinner/ui/Spiner.ui";

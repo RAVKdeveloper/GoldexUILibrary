@@ -23,14 +23,23 @@
   padding-left: 5px;
   gap: 10px;
   width: 100%;
-  background-color: #393939ee;
-  border: 1px solid #424242;
-  border-radius: 6px;
+  background-color: #1f1f24;
+  border: 2px solid rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
   overflow: hidden;
   font-size: 14px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  padding: 0.75rem;
+  @apply transition;
 
   &:focus-within {
-    border: 1px solid #3c89e8;
+    border: 2px solid #73e5cf;
+  }
+
+  &:hover {
+    border-color: #73e5cf;
+    @apply transition;
   }
 
   svg {
@@ -51,7 +60,7 @@
 }
 
 .listItems {
-  @apply overflow-y-auto flex flex-col gap-0.5 max-h-64 pb-4;
+  @apply overflow-y-auto flex flex-col gap-0.5 max-h-64 pb-1;
 }
 
 .listItems::-webkit-scrollbar {
@@ -60,4 +69,8 @@
 
 .dropdown.open {
   @apply pointer-events-auto opacity-100 transition;
+}
+
+.empty {
+  @apply flex justify-center items-center p-3;
 }

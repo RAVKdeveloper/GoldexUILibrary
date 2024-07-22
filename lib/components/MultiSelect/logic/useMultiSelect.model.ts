@@ -2,7 +2,10 @@ import { useCallback, useEffect, useState } from "react";
 
 import type { SelectOptions } from "../assets/MultiSelect.type";
 
-export const useMultiSelect = (changeValue: (val: SelectOptions[]) => void) => {
+export const useMultiSelect = (
+  changeValue: (val: SelectOptions[]) => void,
+  allDeleted?: boolean
+) => {
   const [isOpenDropDown, setIsOpenDropdown] = useState<boolean>(false);
   const [value, setValue] = useState<SelectOptions[]>([]);
 
@@ -30,6 +33,12 @@ export const useMultiSelect = (changeValue: (val: SelectOptions[]) => void) => {
     changeValue([]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (allDeleted) {
+      setValue([]);
+    }
+  }, [allDeleted]);
 
   return {
     isOpenDropDown,

@@ -1,18 +1,18 @@
 .root {
-  @apply w-full relative min-h-9 pl-1 pr-8 py-0.25 bg-bg-primary rounded-xl 
+  @apply w-full relative min-h-12 pl-1 pr-8 py-0.25 bg-bg-primary rounded-xl 
   border border-white border-opacity-10 cursor-pointer hover:border-bg-accent transition;
 }
 
 .placeholder {
-  @apply w-full flex items-center gap-2 flex-wrap;
+  @apply w-full flex items-center gap-2 flex-wrap pt-1;
 }
 
 .placeholder span {
-  @apply pt-1.5 pl-1 text-text-white text-sm opacity-45;
+  @apply pt-2 pl-1 text-text-white text-sm opacity-45;
 }
 
 .mainIcon {
-  @apply absolute top-2.5 right-3;
+  @apply absolute top-[16px] right-3;
 }
 
 .dropdown {

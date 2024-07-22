@@ -23,4 +23,5 @@ export interface MultiSelectType extends HTMLAttributes<HTMLDivElement> {
   placeholder?: string | ReactNode;
   options: SelectOptions[];
   onChangeValue: (val: SelectOptions[]) => void;
+  readonly allDeleted?: boolean;
 }

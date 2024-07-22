@@ -17,6 +17,7 @@ export const MultiSelect: FC<MultiSelectType> = ({
   placeholder,
   options,
   onChangeValue,
+  allDeleted,
   ...props
 }) => {
   const {
@@ -26,7 +27,7 @@ export const MultiSelect: FC<MultiSelectType> = ({
     changeSelectValue,
     removeValue,
     deleteAllValue,
-  } = useMultiSelect(onChangeValue);
+  } = useMultiSelect(onChangeValue, allDeleted);
 
   return (
     <>

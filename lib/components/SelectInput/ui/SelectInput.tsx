@@ -1,25 +1,29 @@
-import { FC, useEffect, useRef, useState } from 'react';
-import s from '../assets/style.module.css';
-import { ChevronArrowDownIcon, SearchIcon } from 'goldex-icon-library';
-import { Dropdown } from '../../../main';
-import { OptionType, SelectInputProps } from '../assets/SelectInput.type';
+import { ChevronArrowDownIcon, SearchIcon } from "goldex-icon-library";
+import { FC, useEffect, useRef, useState } from "react";
+import { Dropdown } from "../../../main";
+import { OptionType, SelectInputProps } from "../assets/SelectInput.type";
+import s from "../assets/style.module.css";
 
 export const SelectInput: FC<SelectInputProps> = ({
   options,
   onClickOption,
-  isOpen,
-  setIsOpen,
+  placeholder,
+  sizeType = "sm",
   active,
-  sizeType = 'sm',
+  emptyText,
   ...rest
 }) => {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
+  const [filteringOptions, setFilteringOptions] = useState<OptionType[]>([]);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const filterOptions = (options: OptionType[]) => {
-    return options.filter((obj) => {
-      return obj.label.includes(searchValue);
+    const data = options.filter((obj) => {
+      return obj.label.includes(searchValue) || obj.value.includes(searchValue);
     });
+
+    setFilteringOptions(data);
   };
 
   useEffect(() => {
@@ -28,41 +32,49 @@ export const SelectInput: FC<SelectInputProps> = ({
       if (!containerRef || containerRef.current?.contains(target)) return;
 
       setIsOpen(false);
-      setSearchValue('');
+      setSearchValue("");
     };
 
-    document.addEventListener('click', onClickOutside);
+    document.addEventListener("click", onClickOutside);
 
-    return () => document.removeEventListener('click', onClickOutside);
+    return () => document.removeEventListener("click", onClickOutside);
   }, []);
+
+  useEffect(() => {
+    filterOptions(options);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchValue, options]);
 
   return (
     <div className={`${s.root} ${s[sizeType]}`}>
-      {isOpen && (
-        <article className={`${s.dropdown} ${isOpen && s.open}`}>
-          <div className={s.listItems}>
-            {filterOptions(options).map(({ id, label, value }) => (
+      <article className={`${s.dropdown} ${isOpen && s.open}`}>
+        <div className={s.listItems}>
+          {filteringOptions.length > 0 ? (
+            filteringOptions.map(({ id, label, value }) => (
               <Dropdown
                 placeholder={label}
-                active={label === active}
+                active={value.toString() === active.toString()}
+                isSuccess={value.toString() === active.toString()}
                 key={id}
                 onClick={() => {
-                  onClickOption(value);
-                  setSearchValue('');
+                  onClickOption({ id, label, value });
+                  setSearchValue("");
                 }}
               />
-            ))}
-          </div>
-        </article>
-      )}
-      <div className={s['input-container']} ref={containerRef}>
+            ))
+          ) : (
+            <div className={s.empty}>{emptyText ?? "Empty :("}</div>
+          )}
+        </div>
+      </article>
+      <div className={s["input-container"]} ref={containerRef}>
         <input
           value={isOpen ? searchValue : active}
           onChange={(e) => {
             if (!isOpen) return;
             setSearchValue(e.target.value);
           }}
-          placeholder={active || ''}
+          placeholder={placeholder || active.toString()}
           onClick={() => setIsOpen(!isOpen)}
           {...rest}
         />
