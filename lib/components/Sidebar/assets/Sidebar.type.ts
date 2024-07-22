@@ -43,6 +43,10 @@ export interface SidebarType {
   isOpenModal: boolean;
   changeLanguage: (lng: string) => void;
   activeLng: string;
+  textMyProfile: string;
+  textEditProfile: string;
+  cbMyProfile: () => void;
+  cbEditProfile: () => void;
   cbLogOut: () => void;
   cbSupport?: () => void;
   cbTheme?: () => void;
