@@ -1,0 +1,63 @@
+.root {
+  position: relative;
+  color: #fff;
+
+  &.sm {
+    width: 104px;
+  }
+
+  &.lg {
+    width: 170px;
+  }
+
+  &.full {
+    width: 100%;
+  }
+}
+
+.input-container {
+  height: 35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  gap: 10px;
+  width: 100%;
+  background-color: #393939ee;
+  border: 1px solid #424242;
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 14px;
+
+  &:focus-within {
+    border: 1px solid #3c89e8;
+  }
+
+  svg {
+    position: absolute;
+    right: 5px;
+  }
+
+  input {
+    width: 100%;
+    background: transparent;
+    outline: none;
+  }
+}
+
+.dropdown {
+  @apply z-50 p-1.5 max-w-full w-full absolute left-0 bottom-10 max-h-64 overflow-hidden rounded-xl border border-opacity-5 bg-bg-primary
+    pointer-events-none opacity-0 transition;
+}
+
+.listItems {
+  @apply overflow-y-auto flex flex-col gap-0.5 max-h-64 pb-4;
+}
+
+.listItems::-webkit-scrollbar {
+  @apply w-0;
+}
+
+.dropdown.open {
+  @apply pointer-events-auto opacity-100 transition;
+}
