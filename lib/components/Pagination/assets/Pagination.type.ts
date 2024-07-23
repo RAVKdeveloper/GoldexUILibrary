@@ -8,4 +8,7 @@ export interface PaginationType {
   back: () => void;
   disabledNext?: boolean;
   disabledPrev?: boolean;
+  defaultLimit?: number;
+  limitText?: string;
+  onChangeLimit?: (limit: number) => void;
 }

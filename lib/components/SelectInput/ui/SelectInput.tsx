@@ -67,7 +67,10 @@ export const SelectInput: FC<SelectInputProps> = ({
           )}
         </div>
       </article>
-      <div className={s["input-container"]} ref={containerRef}>
+      <div
+        className={`${s["input-container"]} ${s[sizeType]}`}
+        ref={containerRef}
+      >
         <input
           value={isOpen ? searchValue : active}
           onChange={(e) => {
