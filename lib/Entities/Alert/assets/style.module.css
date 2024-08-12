@@ -32,5 +32,5 @@
 }
 
 .text {
-  @apply text-ellipsis text-nowrap whitespace-nowrap text-inherit;
+  @apply text-ellipsis text-wrap whitespace-nowrap text-inherit;
 }

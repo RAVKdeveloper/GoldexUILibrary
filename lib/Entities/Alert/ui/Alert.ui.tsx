@@ -3,17 +3,17 @@ import {
   ErrorIcon,
   FeaturedIcon,
   InfoIcon,
-} from "goldex-icon-library";
-import { FC } from "react";
+} from 'goldex-icon-library';
+import { FC } from 'react';
 
-import type { AlertType } from "../assets/Alert.type";
+import type { AlertType } from '../assets/Alert.type';
 
-import s from "../assets/style.module.css";
+import s from '../assets/style.module.css';
 
 export const Alert: FC<AlertType> = ({
   children,
   variant,
-  sizeType = "standart",
+  sizeType = 'standart',
   isOpen,
   ...props
 }) => {
@@ -31,7 +31,7 @@ export const Alert: FC<AlertType> = ({
       className={`${s.root} ${s[variant]} ${s[sizeType]} ${isOpen && s.open}`}
       {...props}
     >
-      {icons[variant]}
+      <span>{icons[variant]}</span>
       <span className={s.text}>{children}</span>
     </article>
   );
