@@ -1,17 +1,17 @@
-import { FC } from "react";
+import { FC } from 'react';
 
-import { ChevronArrowDownIcon, ErrorIcon } from "goldex-icon-library";
+import { ChevronArrowDownIcon, ErrorIcon } from 'goldex-icon-library';
 
-import { Overflow } from "../../../main";
+import { Overflow } from '../../../main';
 
-import { DropdownMultiSelect } from "../ui/dropdown";
-import { CardMultiSelect } from "./card";
+import { DropdownMultiSelect } from '../ui/dropdown';
+import { CardMultiSelect } from './card';
 
-import { useMultiSelect } from "../logic/useMultiSelect.model";
+import { useMultiSelect } from '../logic/useMultiSelect.model';
 
-import type { MultiSelectType } from "../assets/MultiSelect.type";
+import type { MultiSelectType } from '../assets/MultiSelect.type';
 
-import s from "../assets/style.module.css";
+import s from '../assets/style.module.css';
 
 export const MultiSelect: FC<MultiSelectType> = ({
   placeholder,
@@ -31,8 +31,13 @@ export const MultiSelect: FC<MultiSelectType> = ({
 
   return (
     <>
-      <article className={s.root} {...props} data-testid="multiSelect">
-        <div onClick={openDropdown} data-testid="click-to-open-dropdown">
+      <article
+        className={s.root}
+        {...props}
+        data-testid="multiSelect"
+        onClick={openDropdown}
+      >
+        <div data-testid="click-to-open-dropdown">
           <div className={s.placeholder}>
             {value.length > 0 ? (
               value.map((value) => (
@@ -64,7 +69,6 @@ export const MultiSelect: FC<MultiSelectType> = ({
           removeItem={removeValue}
         />
       </article>
-      {isOpenDropDown && <Overflow cbClose={openDropdown} />}
     </>
   );
 };
