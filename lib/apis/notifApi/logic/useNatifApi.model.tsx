@@ -1,13 +1,16 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from 'react';
 
-import { NatifApiUi } from "../ui/Notif.ui";
+import { NatifApiUi } from '../ui/Notif.ui';
 
-import type { NatifApiProps } from "../assets/props.interface";
+import type { NatifApiProps } from '../assets/props.interface';
+import { NatifApiType } from '../interface/NatifApi.interface';
 
-export const useNatifApi = (params?: { lifeTime: number }) => {
+export const useNatifApi = (params?: {
+  lifeTime: number;
+}): { context: ReactNode; NatifApi: NatifApiType } => {
   const [context, setContext] = useState<ReactNode>();
 
-  class NatifApi {
+  class NatifApi implements NatifApiType {
     public checkAndReturnUi(obj: NatifApiProps) {
       const ui = NatifApiUi(obj.message, true);
       const newContext = ui[obj.variant];
@@ -17,7 +20,7 @@ export const useNatifApi = (params?: { lifeTime: number }) => {
     public success(message: string | ReactNode) {
       const props: NatifApiProps = {
         message,
-        variant: "success",
+        variant: 'success',
       };
 
       this.checkAndReturnUi(props);
@@ -26,7 +29,7 @@ export const useNatifApi = (params?: { lifeTime: number }) => {
     public error(message: string | ReactNode) {
       const props: NatifApiProps = {
         message,
-        variant: "error",
+        variant: 'error',
       };
 
       this.checkAndReturnUi(props);
@@ -35,7 +38,7 @@ export const useNatifApi = (params?: { lifeTime: number }) => {
     public warning(message: string | ReactNode) {
       const props: NatifApiProps = {
         message,
-        variant: "warning",
+        variant: 'warning',
       };
 
       this.checkAndReturnUi(props);
@@ -44,7 +47,7 @@ export const useNatifApi = (params?: { lifeTime: number }) => {
     public info(message: string | ReactNode) {
       const props: NatifApiProps = {
         message,
-        variant: "info",
+        variant: 'info',
       };
 
       this.checkAndReturnUi(props);

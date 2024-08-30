@@ -2,8 +2,6 @@ import { FC } from 'react';
 
 import { ChevronArrowDownIcon, ErrorIcon } from 'goldex-icon-library';
 
-import { Overflow } from '../../../main';
-
 import { DropdownMultiSelect } from '../ui/dropdown';
 import { CardMultiSelect } from './card';
 
