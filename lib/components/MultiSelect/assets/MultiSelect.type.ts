@@ -1,4 +1,4 @@
-import type { HTMLAttributes, ReactNode } from "react";
+import type { HTMLAttributes, ReactNode } from 'react';
 
 export interface SelectOptions {
   label: string;
@@ -21,6 +21,7 @@ export interface CardMultiSelectType {
 
 export interface MultiSelectType extends HTMLAttributes<HTMLDivElement> {
   placeholder?: string | ReactNode;
+  selectedItems: SelectOptions[];
   options: SelectOptions[];
   onChangeValue: (val: SelectOptions[]) => void;
   readonly allDeleted?: boolean;

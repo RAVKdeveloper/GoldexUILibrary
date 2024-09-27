@@ -1,33 +1,35 @@
-import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import { userEvent } from "@testing-library/user-event";
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
+import { userEvent } from '@testing-library/user-event';
 
-import { MultiSelect } from "../index";
+import { MultiSelect } from '../index';
 
-describe("testing MultiSelect component", () => {
+describe('testing MultiSelect component', () => {
   const user = userEvent.setup();
 
-  it("render empty options", () => {
+  it('render empty options', () => {
     render(
       <MultiSelect
+        selectedItems={[]}
         options={[]}
         onChangeValue={() => {}}
         placeholder="Placeholder"
       />
     );
 
-    const rootComponent = screen.getByTestId("multiSelect");
+    const rootComponent = screen.getByTestId('multiSelect');
 
     expect(rootComponent).toBeInTheDocument();
   });
 
-  it("render with options && click", () => {
+  it('render with options && click', () => {
     render(
       <MultiSelect
+        selectedItems={[]}
         options={[
           {
-            label: "Test",
-            value: "Test",
+            label: 'Test',
+            value: 'Test',
           },
         ]}
         onChangeValue={() => {}}
@@ -35,8 +37,8 @@ describe("testing MultiSelect component", () => {
       />
     );
 
-    const rootComponent = screen.getByTestId("multiSelect");
-    const clickDropdownComponent = screen.getByTestId("click-to-open-dropdown");
+    const rootComponent = screen.getByTestId('multiSelect');
+    const clickDropdownComponent = screen.getByTestId('click-to-open-dropdown');
 
     user.click(clickDropdownComponent);
 
