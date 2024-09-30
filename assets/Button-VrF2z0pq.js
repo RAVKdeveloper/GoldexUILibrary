@@ -1,0 +1,7 @@
+import{j as u}from"./jsx-runtime-DQ32znRX.js";import{r as d}from"./index-DH5ua8nC.js";const _="_button_1nbfo_1",m="_primary_1nbfo_6",f="_secondary_1nbfo_11",p="_critical_1nbfo_16",b="_full_1nbfo_21",v="_md_1nbfo_25",y="_lg_1nbfo_29",$="_sm_1nbfo_33",g="_es_1nbfo_37",q="_disabled_1nbfo_41",x="_active_1nbfo_45",I="_onlyIcon_1nbfo_57",e={button:_,primary:m,secondary:f,critical:p,full:b,md:v,lg:y,sm:$,es:g,disabled:q,active:x,onlyIcon:I},s=d.forwardRef(({iconLocation:a="start",icon:t,children:n,variant:r,size:o="md",isActive:c,...l},i)=>u.jsxs("button",{className:`
+        ${e.button} 
+        ${`${e[r]} ${c?e.active:""}`} 
+        ${e[o]} 
+        ${l.disabled&&e.disabled}
+        ${t&&!n&&`${e.onlyIcon} ${o&&e[o]}`}
+        `,...l,ref:i,children:[a==="start"&&t,n&&n,a==="end"&&t]}));try{s.displayName="Button",s.__docgenInfo={description:"",displayName:"Button",props:{iconLocation:{defaultValue:{value:"start"},description:"",name:"iconLocation",required:!1,type:{name:"enum",value:[{value:'"end"'},{value:'"start"'}]}},icon:{defaultValue:null,description:"",name:"icon",required:!1,type:{name:"ReactNode"}},variant:{defaultValue:null,description:"",name:"variant",required:!0,type:{name:"enum",value:[{value:'"primary"'},{value:'"secondary"'},{value:'"critical"'}]}},size:{defaultValue:{value:"md"},description:"",name:"size",required:!1,type:{name:"enum",value:[{value:'"full"'},{value:'"md"'},{value:'"lg"'},{value:'"sm"'},{value:'"es"'}]}},isActive:{defaultValue:null,description:"",name:"isActive",required:!1,type:{name:"boolean"}}}}}catch{}export{s as B};
