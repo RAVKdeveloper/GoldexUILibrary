@@ -1,0 +1,1 @@
+import{j as o}from"./jsx-runtime-DQ32znRX.js";const a="_root_1bux8_1",s={root:a},r=({text:e,children:t})=>o.jsxs("th",{className:s.root,children:[e,t]});try{r.displayName="HeaderTable",r.__docgenInfo={description:"",displayName:"HeaderTable",props:{text:{defaultValue:null,description:"",name:"text",required:!1,type:{name:"string"}}}}}catch{}export{r as H};

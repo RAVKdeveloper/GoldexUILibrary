@@ -1,0 +1,11 @@
+import { TransactionCard } from "../ui/TransactionCard.ui";
+import type { Meta, StoryObj } from "@storybook/react";
+declare const meta: Meta<typeof TransactionCard>;
+export default meta;
+type Story = StoryObj<typeof TransactionCard>;
+export declare const DepositRU: Story;
+export declare const DepositEN: Story;
+export declare const ExchangeRU: Story;
+export declare const ExchangeEN: Story;
+export declare const InferenceRU: Story;
+export declare const InferenceEN: Story;

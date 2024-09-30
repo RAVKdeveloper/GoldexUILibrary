@@ -1,5 +1,5 @@
-import { ModalActions } from '../..';
-import type { Meta, StoryObj } from '@storybook/react';
+import { ModalActions } from "../..";
+import type { Meta, StoryObj } from "@storybook/react";
 declare const meta: Meta<typeof ModalActions>;
 export default meta;
 type Story = StoryObj<typeof ModalActions>;

@@ -1,4 +1,7 @@
+import { ReactNode } from "react";
 export interface BalanceCardType {
     balance: number;
-    variant: 'usdt' | 'rub';
+    icon?: ReactNode;
+    currency: string;
+    height?: "sm" | "lg";
 }

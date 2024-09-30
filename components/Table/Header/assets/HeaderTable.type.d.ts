@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
 export interface HeaderTableType {
-    text: string;
+    text?: string;
+    children: ReactNode;
 }

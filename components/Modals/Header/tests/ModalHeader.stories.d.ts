@@ -1,5 +1,5 @@
-import { ModalHeader } from '../ui/ModalHeader.ui';
-import type { Meta, StoryObj } from '@storybook/react';
+import { ModalHeader } from "../ui/ModalHeader.ui";
+import type { Meta, StoryObj } from "@storybook/react";
 declare const meta: Meta<typeof ModalHeader>;
 export default meta;
 type Story = StoryObj<typeof ModalHeader>;

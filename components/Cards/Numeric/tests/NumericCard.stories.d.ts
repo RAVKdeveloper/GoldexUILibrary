@@ -1,4 +1,4 @@
-import { NumericCard } from "../..";
+import { NumericCard } from "../ui/NumericCard.ui";
 import type { Meta, StoryObj } from "@storybook/react";
 declare const meta: Meta<typeof NumericCard>;
 export default meta;
